@@ -35,12 +35,12 @@
                                       action="{% url 'foirequest-set_message_sender' slug=object.slug message_id=message.id %}">
                                     {% csrf_token %}
                                     <label class="form-label" for="id_m{{ message.id }}-sender">
-                                        {% blocktrans %}Set the Public Body that sent this message:{% endblocktrans %}
+                                        {% blocktrans %}Set the Public Agency that sent this message:{% endblocktrans %}
                                     </label>
                                     {{ message_pb_form.sender }}
                                     <p class="text-end">
                                         <button type="submit" class="btn btn-sm btn-primary">
-                                            {% blocktrans %}Set Sending Public Body{% endblocktrans %}
+                                            {% blocktrans %}Set Sending Public Agency{% endblocktrans %}
                                         </button>
                                     </p>
                                 </form>
@@ -69,7 +69,7 @@
                         {% if message.sender_public_body %}
                             <a href="{{ message.sender_public_body.get_absolute_url }}">{{ message.sender_public_body.name }}</a>
                         {% else %}
-                            {% trans "Public Body" %}
+                            {% trans "Public Agency" %}
                         {% endif %}
                     {% endif %}
                 {% else %}
@@ -154,11 +154,11 @@
                                   action="{% url 'foirequest-set_message_recipient' slug=object.slug message_id=message.id %}">
                                 {% csrf_token %}
                                 <label class="form-label" for="id_m{{ message.id }}-sender">
-                                    {% blocktrans %}Set the public body that received this message:{% endblocktrans %}
+                                    {% blocktrans %}Set the public agency that received this message:{% endblocktrans %}
                                 </label>
                                 {{ message_pb_form.recipient }}
                                 <p class="text-end">
-                                    <button type="submit" class="btn btn-primary">{% blocktrans %}Set receiving public body{% endblocktrans %}</button>
+                                    <button type="submit" class="btn btn-primary">{% blocktrans %}Set receiving public agency{% endblocktrans %}</button>
                                 </p>
                             </form>
                         {% endwith %}

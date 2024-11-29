@@ -158,16 +158,16 @@ class MakeRequestView(FormView):
             },
             "i18n": {
                 "publicBodiesFound": [
-                    _("one public body found"),
-                    _("{count} public bodies found").format(count="${count}"),
+                    _("one public agency found"),
+                    _("{count} public agencies found").format(count="${count}"),
                 ],
                 "publicBodiesChosen": [
-                    _("one public body chosen"),
-                    _("{count} public bodies chosen").format(count="${count}"),
+                    _("one public agency chosen"),
+                    _("{count} public agencies chosen").format(count="${count}"),
                 ],
                 "publicBodiesCount": [
-                    _("one public body"),
-                    _("{count} public bodies").format(count="${count}"),
+                    _("one public agency"),
+                    _("{count} public agencies").format(count="${count}"),
                 ],
                 "requestCount": [
                     pgettext("js", "one request"),
@@ -178,13 +178,13 @@ class MakeRequestView(FormView):
                 "close": _("close"),
                 "makeRequest": _("Make request"),
                 "writingRequestTo": _("You are writing a request to"),
-                "toMultiPublicBodies": _("To: {count} public bodies").format(
+                "toMultiPublicBodies": _("To: {count} public agencies").format(
                     count="${count}"
                 ),
-                "selectPublicBodies": _("Select public bodies"),
+                "selectPublicBodies": _("Select public agencies"),
                 "continue": _("continue"),
                 "selectAll": [_("select one"), _("select all")],
-                "selectingAll": _("Selecting all public bodies, please wait..."),
+                "selectingAll": _("Selecting all public agencies, please wait..."),
                 "name": _("Name"),
                 "jurisdictionPlural": [
                     _("Jurisdiction"),
@@ -220,7 +220,7 @@ class MakeRequestView(FormView):
                 "goNextStep": _("Go to next step"),
                 "batchRequestDraftOnly": _(
                     "You have been allowed to make one project request to "
-                    "these public bodies, but you do not have permission "
+                    "these public agencies, but you do not have permission "
                     "to select your own."
                 ),
                 "subject": _("Subject"),
@@ -244,7 +244,7 @@ class MakeRequestView(FormView):
                 "reviewEdit": _("Edit"),
                 "reviewFrom": _("From"),
                 "reviewTo": _("To"),
-                "reviewPublicbodies": _("public bodies"),
+                "reviewPublicbodies": _("public agencies"),
                 "reviewSpelling": _("Please use proper spelling."),
                 "reviewPoliteness": _("Please stay polite."),
                 "submitRequest": _("Submit request"),
@@ -358,9 +358,9 @@ class MakeRequestView(FormView):
 
     def get_publicbodies(self):
         if self.request.method == "POST":
-            # on POST public bodies need to come from POST vars
+            # on POST public agencies need to come from POST vars
             if self.has_prepared_publicbodies():
-                # prepared draft with fixed public bodies
+                # prepared draft with fixed public agencies
                 return self.draft.publicbodies.all()
             self._publicbodies = []
         if hasattr(self, "_publicbodies"):

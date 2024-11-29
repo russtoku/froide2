@@ -226,7 +226,7 @@ def edit_postal_message(request, foirequest, message_id):
         "i18n": {
             "uppy": get_uppy_i18n(),
             # from publicbody/widgets
-            "missingPublicBody": _("Are we missing a public body?"),
+            "missingPublicBody": _("Are we missing a public agency?"),
             "publicBodySearchPlaceholder": _("Ministry of..."),
             "search": _("Search"),
             "searchPublicBodyLabel": _("Search for public authorities"),
@@ -234,7 +234,7 @@ def edit_postal_message(request, foirequest, message_id):
             "environment": _("Environment"),
             "ministryOfLabour": _("Ministry of Labour"),
             "or": _("or"),
-            "noPublicBodiesFound": _("No Public Bodies found for this query."),
+            "noPublicBodiesFound": _("No Public Agencies found for this query."),
             "letUsKnow": _("Please let us know!"),
             # from views/attachment for <pdf-redaction>; not all might be necessary
             "previousPage": _("Previous Page"),
@@ -331,10 +331,10 @@ def edit_postal_message(request, foirequest, message_id):
             "makeResultsExplanation": _(
                 "Are these documents a result of your request and not only correspondence?"
             ),
-            # for public body beta chooser, mostly from MakeRequestView
+            # for public agency beta chooser, mostly from MakeRequestView
             "publicBodiesFound": [
-                _("one public body found"),
-                _("{count} public bodies found").format(count="${count}"),
+                _("one public agency found"),
+                _("{count} public agencies found").format(count="${count}"),
             ],
             "administrativeUnitKind": _("Type of administrative unit"),
             "topicPlural": [
@@ -388,15 +388,15 @@ def edit_postal_message(request, foirequest, message_id):
                 "Have you received or sent the uploaded document?"
             ),
             "messagePublicbodyCheckTo": _(
-                "Is this the public body you have sent the letter to?"
+                "Is this the public agency you have sent the letter to?"
             ),
             "messagePublicbodyCheckFrom": _(
-                "Is this the public body that sent the letter?"
+                "Is this the public agency that sent the letter?"
             ),
             "messagePublicbodyUpdateTo": _(
-                "Which public body have you sent this letter to?"
+                "Which public agency have you sent this letter to?"
             ),
-            "messagePublicbodyUpdateFrom": _("Which public body has sent this letter?"),
+            "messagePublicbodyUpdateFrom": _("Which public agency has sent this letter?"),
             "messageDate": _("When was the letter sent?"),
             "messageIsRegisteredMail": _("The letter is registered mail"),
             "messageRegisteredMailInfo": _(
@@ -422,21 +422,21 @@ def edit_postal_message(request, foirequest, message_id):
             "messageStatusIsResolved": _("Yes, the request is resolved."),
             "messageStatusIsResolvedNot": _("No, the request is not resolved yet."),
             "messageResolution": _("How would you characterize the result?"),
-            "messageCost": _("How much compensation does the public body demand?"),
-            "messageCostCheck": _("Did the public body demand compensation?"),
+            "messageCost": _("How much compensation does the public agency demand?"),
+            "messageCostCheck": _("Did the public agency demand compensation?"),
             "messageCostCheckLast": _(
-                "You have noted that the public body had demanded compensation to the amount of €${amount}.<br/>Is this amount still correct?"
+                "You have noted that the public agency had demanded compensation to the amount of €${amount}.<br/>Is this amount still correct?"
             ),
             "redactionPick": _("Which documents do you want to redact?"),
             "redactionInfo": _(
-                "A document should be redacted when it contains information about yourself or the public body's employees."
+                "A document should be redacted when it contains information about yourself or the public agency's employees."
             ),
             "selectAll": _("Select all"),
             "selectNone": _("Select none"),
             "redactionCounter": _("Redacting document ${current} of ${total}"),
             "redactionInfoWhat": _("You should redact:"),
             "redactionInfoWhat1": _("Your name and your address"),
-            "redactionInfoWhat2": _("Names of public body employees"),
+            "redactionInfoWhat2": _("Names of public agency employees"),
             "redactionInfoWhat3": _("Signatures"),
             "redactionInfoWhat4": _("E-mail addresses that end in @fragdenstaat.de"),
             "helpNeeded": _("I have technical difficulties / I need help"),

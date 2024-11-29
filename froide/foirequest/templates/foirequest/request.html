@@ -65,11 +65,11 @@
             {% include "snippets/messages.html" %}
         </template>
         <template data-slot="publicbody-legend-title">
-            <legend>{% blocktrans %}Choose a public body{% endblocktrans %}</legend>
+            <legend>{% blocktrans %}Choose a public agency{% endblocktrans %}</legend>
         </template>
         <template data-slot="publicbody-help-text">
             <p>
-                {% blocktrans %}Please type <strong>the name of the public body</strong> you'd like to request information from into the search box.{% endblocktrans %}
+                {% blocktrans %}Please type <strong>the name of the public agency</strong> you'd like to request information from into the search box.{% endblocktrans %}
             </p>
         </template>
         <template data-slot="publicbody-missing">
@@ -78,7 +78,7 @@
                 {% url 'publicbody-list' as pb_search_url %}
                 {% url 'publicbody-propose' as pb_propose_url %}
                 {% blocktrans with search_url=pb_search_url propose_url=pb_propose_url %}
-              <a href="{{ search_url }}">Search in all public bodies</a> or <a href="{{ propose_url }}">suggest a new one</a>.
+              <a href="{{ search_url }}">Search in all public agencies</a> or <a href="{{ propose_url }}">suggest a new one</a>.
             {% endblocktrans %}
             </p>
         </template>
@@ -132,7 +132,7 @@
                     </form>
                 {% else %}
                     <a href="{% url 'publicbody-list' %}">
-                        {% trans "Please choose a public body first and click on the «Make a request» button." %}
+                        {% trans "Please choose a public agency first and click on the «Make a request» button." %}
                     </a>
                 {% endif %}
             {% endif %}

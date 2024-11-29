@@ -16,7 +16,7 @@
     </h3>
     {% if not object.confirmed %}
         <p>
-            {% trans "This proposed public body has not been confirmed yet and is therefore not available for requests. You can adjust the properties and confirm or delete the public body below." %}
+            {% trans "This proposed public agency has not been confirmed yet and is therefore not available for requests. You can adjust the properties and confirm or delete the public agency below." %}
         </p>
     {% endif %}
     <form action="" method="post">
@@ -26,7 +26,7 @@
             {% if object.confirmed %}
                 {% trans "Apply change" %}
             {% else %}
-                {% trans "Confirm public body" %}
+                {% trans "Confirm public agency" %}
             {% endif %}
         </button>
         {% if not object.confirmed %}
@@ -34,7 +34,7 @@
                 <div class="card-body">
                     <h3>{% trans "Delete proposal" %}</h3>
                     <p>
-                        {% trans "Reasons to reject the proposal could be that the public body already exists in our database or that the proposal is not a public body that can be requested." %}
+                        {% trans "Reasons to reject the proposal could be that the public agency already exists in our database or that the proposal is not a public agency that can be requested." %}
                     </p>
                     <label class="form-label" for="delete_reason">
                         {% trans "Please give a reason for not accepting this proposal. It will be send to the user who made the proposal." %}
@@ -42,11 +42,11 @@
                     <textarea id="delete_reason"
                               class="form-control"
                               name="delete_reason"
-                              placeholder="{% trans 'This is not a public body because...' %}"></textarea>
+                              placeholder="{% trans 'This is not a public agency because...' %}"></textarea>
                     <button class="mt-2 btn btn-danger float-end"
                             type="submit"
                             name="delete"
-                            value="1">{% trans "Delete proposed public body" %}</button>
+                            value="1">{% trans "Delete proposed public agency" %}</button>
                 </div>
             </div>
         {% endif %}

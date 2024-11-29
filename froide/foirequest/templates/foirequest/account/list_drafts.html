@@ -45,7 +45,7 @@
                 {% if pbcount == 1 %}
                     {% blocktrans with subject=object.subject name=object.publicbodies.all.0.name %}“{{ subject }}” to {{ name }}{% endblocktrans %}
                 {% else %}
-                    {% blocktrans with subject=object.subject count count=pbcount %}“{{ subject }}” to one public body{% plural %}“{{ subject }}” to {{ count }} public bodies{% endblocktrans %}
+                    {% blocktrans with subject=object.subject count count=pbcount %}“{{ subject }}” to one public agency{% plural %}“{{ subject }}” to {{ count }} public agencies{% endblocktrans %}
                 {% endif %}
             {% endwith %}
             {% if object.request_or_project %}

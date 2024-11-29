@@ -4,7 +4,7 @@
 {% load searchtags %}
 {% load search_helper %}
 {% block search_title %}
-    {% trans "Public Bodies" %}
+    {% trans "Public Agencies" %}
 {% endblock %}
 {% block search_form_filters %}
     <div class="row">
@@ -28,7 +28,7 @@
 {% block search_results_label %}
     {% if page_obj.paginator.count == 0 %}
         <p>
-            <a href="{% url 'publicbody-propose' %}">{% trans "Public body missing? Propose a new public body!" %}</a>
+            <a href="{% url 'publicbody-propose' %}">{% trans "Public agency missing? Propose a new public agency!" %}</a>
         </p>
     {% endif %}
     {{ block.super }}
@@ -36,7 +36,7 @@
 {% block sidebar_bottom %}
     {% if page_obj.paginator.count > 0 %}
         <p>
-            <a href="{% url 'publicbody-propose' %}">{% trans "Public body missing? Propose a new public body!" %}</a>
+            <a href="{% url 'publicbody-propose' %}">{% trans "Public agency missing? Propose a new public agency!" %}</a>
         </p>
     {% endif %}
 {% endblock %}

@@ -305,8 +305,8 @@ class Migration(migrations.Migration):
             ],
             options={
                 "ordering": ("name",),
-                "verbose_name": "Public Body",
-                "verbose_name_plural": "Public Bodies",
+                "verbose_name": "Public Agency",
+                "verbose_name_plural": "Public Agencies",
             },
             managers=[
                 ("non_filtered_objects", django.db.models.manager.Manager()),
@@ -340,8 +340,8 @@ class Migration(migrations.Migration):
                 ("rank", models.SmallIntegerField(default=0, verbose_name="rank")),
             ],
             options={
-                "verbose_name": "Public Body Tag",
-                "verbose_name_plural": "Public Body Tags",
+                "verbose_name": "Public Agency Tag",
+                "verbose_name_plural": "Public Agency Tags",
             },
         ),
         migrations.CreateModel(
@@ -373,8 +373,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "Tagged Public Body",
-                "verbose_name_plural": "Tagged Public Bodies",
+                "verbose_name": "Tagged Public Agency",
+                "verbose_name_plural": "Tagged Public Agencies",
             },
         ),
         migrations.AddField(

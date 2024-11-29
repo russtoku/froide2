@@ -517,7 +517,7 @@ class PublicBodyViewSet(
     renderer_classes = tuple(api_settings.DEFAULT_RENDERER_CLASSES) + (JSONPRenderer,)
 
     class RECONCILIATION_META:
-        name = "Public Body"
+        name = "Public Agency"
         id = "publicbody"
         model = PublicBody
         document = PublicBodyDocument

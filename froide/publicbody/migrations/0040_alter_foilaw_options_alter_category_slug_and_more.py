@@ -53,8 +53,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "Categorized Public Body Change Proposal",
-                "verbose_name_plural": "Categorized Public Body Change Proposals",
+                "verbose_name": "Categorized Public Agency Change Proposal",
+                "verbose_name_plural": "Categorized Public Agency Change Proposals",
             },
         ),
         migrations.CreateModel(
@@ -164,8 +164,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "Proposed Public Body Change",
-                "verbose_name_plural": "Proposed Public Body Changes",
+                "verbose_name": "Proposed Public Agency Change",
+                "verbose_name_plural": "Proposed Public Agency Changes",
                 "ordering": ("-created_at",),
             },
         ),

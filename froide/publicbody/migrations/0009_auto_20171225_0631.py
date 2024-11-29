@@ -35,8 +35,8 @@ class Migration(migrations.Migration):
                 ),
             ],
             options={
-                "verbose_name": "Categorized Public Body",
-                "verbose_name_plural": "Categorized Public Bodies",
+                "verbose_name": "Categorized Public Agency",
+                "verbose_name_plural": "Categorized Public Agencies",
             },
         ),
         migrations.CreateModel(

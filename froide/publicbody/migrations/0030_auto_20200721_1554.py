@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
             name="publicbody",
             options={
                 "ordering": ("name",),
-                "permissions": (("moderate", "Can moderate public bodies"),),
-                "verbose_name": "Public Body",
-                "verbose_name_plural": "Public Bodies",
+                "permissions": (("moderate", "Can moderate public agencies"),),
+                "verbose_name": "Public Agency",
+                "verbose_name_plural": "Public Agencies",
             },
         ),
     ]

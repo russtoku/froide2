@@ -15,7 +15,7 @@
     {% endif %}
     {% if not object.is_foi %}
         <div class="alert alert-info">
-            {% blocktrans %}This request is not an FoI request. This site is only for requesting specific, non-personal information from public bodies.{% endblocktrans %}
+            {% blocktrans %}This request is not an FoI request. This site is only for requesting specific, non-personal information from public agencies.{% endblocktrans %}
         </div>
     {% endif %}
     {% if object.closed %}
@@ -43,7 +43,7 @@
                     &rarr;
                     <a href="#write-messages"
                        data-scrollto="write-messages"
-                       class="alert-link">{% translate "Write a reminder to the public body!" %}</a>
+                       class="alert-link">{% translate "Write a reminder to the public agency!" %}</a>
                 </li>
                 {% block aditional_actions %}{% endblock %}
             </ul>

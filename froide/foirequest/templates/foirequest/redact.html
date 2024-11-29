@@ -19,7 +19,7 @@
                     <h5 class="card-header">{% trans "What you need to redact" %}</h5>
                     <div class="card-body">
                         <p>
-                            {% trans "If this document <strong>is not a letter to you</strong> from a public body, but any other kind of document, it very likely <strong>does not need a redaction</strong>." %}
+                            {% trans "If this document <strong>is not a letter to you</strong> from a public agency, but any other kind of document, it very likely <strong>does not need a redaction</strong>." %}
                         </p>
                         <ul>
                             <li>
@@ -38,7 +38,7 @@
                                 {% endif %}
                             </li>
                             <li>{% trans "Please remove email addresses of this site." %}</li>
-                            <li>{% trans "Please remove all names of public body employees." %}</li>
+                            <li>{% trans "Please remove all names of public agency employees." %}</li>
                             {% block redaction_removal_explanation_addition %}
                                 <li>{% trans "Please remove hand-written signatures." %}</li>
                             {% endblock %}

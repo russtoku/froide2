@@ -7,9 +7,9 @@
 {% block metadescription %}
     {% spaceless %}
         {% if object.classification %}
-            {% blocktrans with name=object.name classification=object.classification juris=object.jurisdiction.name site_name=SITE_NAME %}{{ name }} is a public body ({{ classification }}) in {{ juris }} on {{ site_name }}{% endblocktrans %}
+            {% blocktrans with name=object.name classification=object.classification juris=object.jurisdiction.name site_name=SITE_NAME %}{{ name }} is a public agency ({{ classification }}) in {{ juris }} on {{ site_name }}{% endblocktrans %}
         {% else %}
-            {% blocktrans with name=object.name juris=object.jurisdiction.name site_name=SITE_NAME %}{{ name }} is a public body in {{ juris }} on {{ site_name }}{% endblocktrans %}
+            {% blocktrans with name=object.name juris=object.jurisdiction.name site_name=SITE_NAME %}{{ name }} is a public agency in {{ juris }} on {{ site_name }}{% endblocktrans %}
         {% endif %}
     {% endspaceless %}
 {% endblock %}
@@ -30,7 +30,7 @@
         {% if object.email and object.confirmed %}
             <p>
                 <a class="btn btn-primary"
-                   href="{% url 'foirequest-make_request' publicbody_slug=object.slug %}">{% blocktrans %}Make a Request to this public body!{% endblocktrans %}</a>
+                   href="{% url 'foirequest-make_request' publicbody_slug=object.slug %}">{% blocktrans %}Make a Request to this public agency!{% endblocktrans %}</a>
             </p>
         {% endif %}
         <div class="row">
@@ -143,9 +143,9 @@
                     <div class="alert alert-warning">
                         <h3>{% trans "Proposal" %}</h3>
                         {% if object.created_by == request.user %}
-                            <p>{% trans "You have proposed this public body, but it has not been confirmed yet." %}</p>
+                            <p>{% trans "You have proposed this public agency, but it has not been confirmed yet." %}</p>
                         {% else %}
-                            <p>{% trans "This public body has been proposed and has not been confirmed yet." %}</p>
+                            <p>{% trans "This public agency has been proposed and has not been confirmed yet." %}</p>
                         {% endif %}
                     </div>
                 {% endif %}
@@ -177,7 +177,7 @@
                         {% endfor %}
                     </table>
                     <h3>
-                        {% blocktrans count count=foirequest_count %}One requests to this public body{% plural %}{{ count }} requests to this public body{% endblocktrans %}
+                        {% blocktrans count count=foirequest_count %}One requests to this public agency{% plural %}{{ count }} requests to this public agency{% endblocktrans %}
                     </h3>
                     <ul class="list-unstyled">
                         {% for object in foirequests %}
@@ -198,12 +198,12 @@
                     {% if foirequest_count > foirequests|length %}
                         <p>
                             <a href="{% url 'foirequest-list' publicbody=object.slug %}">
-                                {% trans "See all FOI requests for this public body" %}
+                                {% trans "See all FOI requests for this public agency" %}
                             </a>
                         </p>
                     {% endif %}
                 {% else %}
-                    <p>{% trans "There are no requests for this public body yet." %}</p>
+                    <p>{% trans "There are no requests for this public agency yet." %}</p>
                 {% endif %}
             </div>
         </div>

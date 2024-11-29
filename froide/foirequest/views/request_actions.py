@@ -85,18 +85,18 @@ def suggest_public_body(request, slug):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                _("Your Public Body suggestion has been added."),
+                _("Your Public Agency suggestion has been added."),
             )
         else:
             messages.add_message(
                 request,
                 messages.WARNING,
-                _("This Public Body has already been suggested."),
+                _("This Public Agency has already been suggested."),
             )
         return redirect(foirequest)
 
     messages.add_message(
-        request, messages.ERROR, _("You need to specify a Public Body!")
+        request, messages.ERROR, _("You need to specify a Public Agency!")
     )
     return render_400(request)
 

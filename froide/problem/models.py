@@ -27,7 +27,7 @@ class ProblemChoices(models.TextChoices):
     INFO_WRONG = "info_wrong", _("Published information is wrong.")
     BOUNCE_PUBLICBODY = (
         "bounce_publicbody",
-        _("You received a bounce mail from the public body."),
+        _("You received a bounce mail from the public agency."),
     )
     MAIL_INAUTHENTIC = (
         "mail_inauthentic",

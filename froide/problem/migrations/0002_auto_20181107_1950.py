@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 choices=[
                     (
                         "bounce_publicbody",
-                        "You received a bounce mail from the public body.",
+                        "You received a bounce mail from the public agency.",
                     ),
                     ("message_not_delivered", "Your message was not delivered."),
                     ("attachment_broken", "The attachments don't seem to work."),

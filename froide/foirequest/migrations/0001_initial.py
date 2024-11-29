@@ -196,10 +196,10 @@ class Migration(migrations.Migration):
                                 b"awaiting_user_confirmation",
                                 "Awaiting user confirmation",
                             ),
-                            (b"publicbody_needed", "Public Body needed"),
+                            (b"publicbody_needed", "Public Agency needed"),
                             (
                                 b"awaiting_publicbody_confirmation",
-                                "Awaiting Public Body confirmation",
+                                "Awaiting Public Agency confirmation",
                             ),
                             (b"awaiting_response", "Awaiting response"),
                             (
@@ -291,10 +291,10 @@ class Migration(migrations.Migration):
                                 b"awaiting_user_confirmation",
                                 "Awaiting user confirmation",
                             ),
-                            (b"publicbody_needed", "Public Body needed"),
+                            (b"publicbody_needed", "Public Agency needed"),
                             (
                                 b"awaiting_publicbody_confirmation",
-                                "Awaiting Public Body confirmation",
+                                "Awaiting Public Agency confirmation",
                             ),
                             (b"awaiting_response", "Awaiting response"),
                             (
@@ -442,7 +442,7 @@ class Migration(migrations.Migration):
                     "reason",
                     models.TextField(
                         default=b"",
-                        verbose_name="Reason this Public Body fits the request",
+                        verbose_name="Reason this Public Agency fits the request",
                         blank=True,
                     ),
                 ),
@@ -450,8 +450,8 @@ class Migration(migrations.Migration):
             options={
                 "ordering": ("timestamp",),
                 "get_latest_by": "timestamp",
-                "verbose_name": "Public Body Suggestion",
-                "verbose_name_plural": "Public Body Suggestions",
+                "verbose_name": "Public Agency Suggestion",
+                "verbose_name_plural": "Public Agency Suggestions",
             },
         ),
         migrations.CreateModel(

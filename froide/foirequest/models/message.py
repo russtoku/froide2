@@ -115,7 +115,7 @@ class FoiMessage(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name=_("From Public Body"),
+        verbose_name=_("From Public Agency"),
         related_name="send_messages",
     )
 
@@ -128,7 +128,7 @@ class FoiMessage(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name=_("Public Body Recipient"),
+        verbose_name=_("Public Agency Recipient"),
         related_name="received_messages",
     )
     status = models.CharField(
@@ -539,7 +539,7 @@ class FoiMessage(models.Model):
         from django.core.exceptions import ValidationError
 
         if self.sender_user and self.sender_public_body:
-            raise ValidationError("Message may not be from user and public body")
+            raise ValidationError("Message may not be from user and public agency")
 
     @classmethod
     def get_throttle_config(cls):

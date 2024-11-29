@@ -18,7 +18,7 @@
                             <form method="get" action="{% url 'foirequest-search' %}">
                                 <div class="mb-3">
                                     <label class="form-label" for="index-search">
-                                        {% blocktrans with foicount=foicount|intcomma pbcount=pbcount|intcomma %}Search {{ foicount }} requests and {{ pbcount }} public bodies:{% endblocktrans %}
+                                        {% blocktrans with foicount=foicount|intcomma pbcount=pbcount|intcomma %}Search {{ foicount }} requests and {{ pbcount }} public agencies:{% endblocktrans %}
                                     </label>
                                     <div class="input-group">
                                         <input id="index-search"

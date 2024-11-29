@@ -151,7 +151,7 @@ def notify_user_public_body_suggested(sender, suggestion=None, **kwargs):
     send_request_user_email(
         public_body_suggested_email,
         sender,
-        subject=_("New suggestion for a Public Body"),
+        subject=_("New suggestion for a Public Agency"),
         context={
             "suggestion": suggestion,
             "foirequest": sender,
@@ -197,7 +197,7 @@ def send_foiproject_created_confirmation(sender, **kwargs):
     )
 
 
-# Updating public body request counts
+# Updating public agency request counts
 @receiver(
     FoiRequest.request_to_public_body, dispatch_uid="foirequest_increment_request_count"
 )

@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                     ("info_wrong", "Published information is wrong."),
                     (
                         "bounce_publicbody",
-                        "You received a bounce mail from the public body.",
+                        "You received a bounce mail from the public agency.",
                     ),
                     (
                         "mail_inauthentic",

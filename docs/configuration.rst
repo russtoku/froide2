@@ -18,10 +18,10 @@ The following keys in that dictionary must be present:
   *boolean* Can users hide their name on the portal? Their name will always be sent with the request, but may not appear on the website.
 
 **public_body_officials_public**
-  *boolean* Are the names of responding public body officials public and visible on the Web?
+  *boolean* Are the names of responding public agency officials public and visible on the Web?
 
 **public_body_officials_email_public**
-  *boolean* Are the email addresses of public body officials public and visible on the Web?
+  *boolean* Are the email addresses of public agency officials public and visible on the Web?
 
 **currency**
   *string* The currency in which payments (if at all) occur
@@ -55,16 +55,16 @@ regexes that also find the name::
 You should replace this with a list of the most common expressions in
 your language.
 
-Index Boosting of Public Bodies
+Index Boosting of Public Agencies
 -------------------------------
 
-Some Public Bodies are more important and should appear first in
+Some Public Agencies are more important and should appear first in
 searches (if their name and description match the search terms). You can
-provide a mapping of public body classifications (e.g. ministry,
+provide a mapping of public agency classifications (e.g. ministry,
 council etc.) to their search boost factor via the `public_body_boosts`
 key in the `FROIDE_CONFIG` setting::
 
-    # boost public bodies by their classification
+    # boost public agencies by their classification
     FROIDE_CONFIG.update(
         'public_body_boosts': {
             u"Ministry": 1.9,
@@ -75,7 +75,7 @@ key in the `FROIDE_CONFIG` setting::
 For autocomplete search results another name schema is used. This needs
 its own config too::
 
-    # boost public bodies for autocomplete
+    # boost public agencies for autocomplete
     FROIDE_CONFIG.update(
         'autocomplete_body_boosts': {
             u"Ministry": 1.9
@@ -95,7 +95,7 @@ production)::
     # production environment:
     EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
 
-Define the standard Django SMTP parameters for sending regular email notifications (not FoI request emails to public bodies)::
+Define the standard Django SMTP parameters for sending regular email notifications (not FoI request emails to public agencies)::
 
     EMAIL_HOST = "smtp.example.com"
     EMAIL_PORT = 587
@@ -103,7 +103,7 @@ Define the standard Django SMTP parameters for sending regular email notificatio
     EMAIL_HOST_PASSWORD = "password"
     EMAIL_USE_TLS = True
 
-Also define the parameters for sending FoI-Mails to public bodies.
+Also define the parameters for sending FoI-Mails to public agencies.
 They might be different because they can either be sent from a fixed
 address and with a special `Reply-To` field or directly from a special
 address::

@@ -56,10 +56,10 @@ class Migration(migrations.Migration):
                 blank=True,
                 choices=[
                     ("awaiting_user_confirmation", "Awaiting user confirmation"),
-                    ("publicbody_needed", "Public Body needed"),
+                    ("publicbody_needed", "Public Agency needed"),
                     (
                         "awaiting_publicbody_confirmation",
-                        "Awaiting Public Body confirmation",
+                        "Awaiting Public Agency confirmation",
                     ),
                     ("awaiting_response", "Awaiting response"),
                     ("awaiting_classification", "Request awaits classification"),
@@ -95,10 +95,10 @@ class Migration(migrations.Migration):
             field=models.CharField(
                 choices=[
                     ("awaiting_user_confirmation", "Awaiting user confirmation"),
-                    ("publicbody_needed", "Public Body needed"),
+                    ("publicbody_needed", "Public Agency needed"),
                     (
                         "awaiting_publicbody_confirmation",
-                        "Awaiting Public Body confirmation",
+                        "Awaiting Public Agency confirmation",
                     ),
                     ("awaiting_response", "Awaiting response"),
                     ("awaiting_classification", "Request awaits classification"),
@@ -115,7 +115,7 @@ class Migration(migrations.Migration):
             field=models.TextField(
                 blank=True,
                 default="",
-                verbose_name="Reason this Public Body fits the request",
+                verbose_name="Reason this Public Agency fits the request",
             ),
         ),
     ]

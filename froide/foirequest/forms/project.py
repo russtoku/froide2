@@ -126,7 +126,7 @@ class SetStatusProjectForm(FoiRequestStatusForm):
                 widget=BootstrapSelect,
                 help_text=_(
                     "When you are (partially) denied access to information, "
-                    "the Public Body should always state the reason."
+                    "the Public Agency should always state the reason."
                 ),
             )
 

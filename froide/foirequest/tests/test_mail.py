@@ -375,7 +375,7 @@ def test_pb_unknown(deferred_message_setup):
     with open(p("test_mail_01.txt"), "rb") as f:
         mail = f.read().decode("ascii")
 
-    # Change sender email domain to not match public body
+    # Change sender email domain to not match public agency
     mail = mail.replace("hb@example.com", "hb@example.org")
     process_mail.delay(mail.encode("ascii"))
     assert (

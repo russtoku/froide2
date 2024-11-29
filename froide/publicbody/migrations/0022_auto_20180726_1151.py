@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name="proposedpublicbody",
             options={
                 "ordering": ("-created_at",),
-                "verbose_name": "Proposed Public Body",
-                "verbose_name_plural": "Proposed Public Bodies",
+                "verbose_name": "Proposed Public Agency",
+                "verbose_name_plural": "Proposed Public Agencies",
             },
         ),
     ]

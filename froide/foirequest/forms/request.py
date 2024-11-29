@@ -149,12 +149,12 @@ class RequestForm(JSONMixin, forms.Form):
 
 class MakePublicBodySuggestionForm(forms.Form):
     publicbody = forms.ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=None,
         widget=PublicBodySelect,
     )
     reason = forms.CharField(
-        label=_("Please specify a reason why this is the right Public Body:"),
+        label=_("Please specify a reason why this is the right Public Agency:"),
         widget=forms.TextInput(attrs={"size": "40", "placeholder": _("Reason")}),
         required=False,
     )
@@ -213,10 +213,10 @@ class PublicBodySuggestionsForm(forms.Form):
 
     def clean(self):
         if self.foirequest.public_body is not None:
-            raise forms.ValidationError(_("This request doesn't need a Public Body!"))
+            raise forms.ValidationError(_("This request doesn't need a Public Agency!"))
 
         if not self.foirequest.needs_public_body():
-            raise forms.ValidationError(_("This request doesn't need a Public Body!"))
+            raise forms.ValidationError(_("This request doesn't need a Public Agency!"))
         return self.cleaned_data
 
     def save(self, user=None):
@@ -287,7 +287,7 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
             localize=True,
             widget=PriceInput,
             help_text=_(
-                "Please specify what the Public Body charges for the information."
+                "Please specify what the Public Agency charges for the information."
             ),
         )
 
@@ -305,7 +305,7 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
             widget=BootstrapSelect,
             help_text=_(
                 "When you are (partially) denied access to information, "
-                "the Public Body should always state the reason."
+                "the Public Agency should always state the reason."
             ),
         )
 

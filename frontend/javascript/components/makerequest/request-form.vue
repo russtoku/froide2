@@ -479,14 +479,14 @@ export default {
       if (this.defaultLaw) {
         return !!this.defaultLaw.request_note_html
       }
-      // FIXME: find all notes of all public body default laws?
+      // FIXME: find all notes of all public agency default laws?
       return false
     },
     hasPublicBodyNotes() {
       if (this.publicBody) {
         return !!this.publicBody.request_note_html
       }
-      // FIXME: find all notes of all public body default laws?
+      // FIXME: find all notes of all public agency default laws?
       return false
     },
     lawNotes() {

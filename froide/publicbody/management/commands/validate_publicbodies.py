@@ -13,7 +13,7 @@ from ...validators import PublicBodyValidator
 
 
 class Command(BaseCommand):
-    help = "Validates public bodies"
+    help = "Validates public agencies"
 
     def add_arguments(self, parser):
         parser.add_argument("filename", type=str, nargs="?", default=None)
@@ -44,9 +44,9 @@ class Command(BaseCommand):
             if filename is None and not validator.is_valid:
                 for _n, email in settings.MANAGERS:
                     send_mail(
-                        _("Public body validation results"),
+                        _("Public agency validation results"),
                         _(
-                            "Please find attached the results of the public body validation"
+                            "Please find attached the results of the public agency validation"
                         ),
                         email,
                         attachments=[

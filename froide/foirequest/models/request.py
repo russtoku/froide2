@@ -200,10 +200,10 @@ class Status(models.TextChoices):
         "awaiting_user_confirmation",
         _("Awaiting user confirmation"),
     )
-    PUBLICBODY_NEEDED = "publicbody_needed", _("Public Body needed")
+    PUBLICBODY_NEEDED = "publicbody_needed", _("Public Agency needed")
     AWAITING_PUBLICBODY_CONFIRMATION = (
         "awaiting_publicbody_confirmation",
-        _("Awaiting Public Body confirmation"),
+        _("Awaiting Public Agency confirmation"),
     )
     AWAITING_RESPONSE = "awaiting_response", _("Awaiting response")
     AWAITING_CLASSIFICATION = (
@@ -236,17 +236,17 @@ STATUS_RESOLUTION_DESCRIPTIONS = [
         Status.AWAITING_USER_CONFIRMATION,
         _("The requester's email address is yet to be confirmed."),
     ),
-    (Status.PUBLICBODY_NEEDED, _("This request still needs a Public Body.")),
+    (Status.PUBLICBODY_NEEDED, _("This request still needs a Public Agency.")),
     (
         Status.AWAITING_PUBLICBODY_CONFIRMATION,
         _(
-            "The Public Body of this request has been created by the user and "
+            "The Public Agency of this request has been created by the user and "
             "still needs to be confirmed."
         ),
     ),
     (
         Status.AWAITING_RESPONSE,
-        _("This request is still waiting for a response from the Public Body."),
+        _("This request is still waiting for a response from the Public Agency."),
     ),
     (
         Status.AWAITING_CLASSIFICATION,
@@ -265,13 +265,13 @@ STATUS_RESOLUTION_DESCRIPTIONS = [
             "provided, but not all)"
         ),
     ),
-    (Resolution.REFUSED, _("The Public Body refuses to provide the information.")),
+    (Resolution.REFUSED, _("The Public Agency refuses to provide the information.")),
     (
         Resolution.USER_WITHDREW_COSTS,
         _("User withdrew the request due to the associated costs."),
     ),
     (Resolution.USER_WITHDREW, _("User withdrew the request for other reasons.")),
-    (Resolution.NOT_HELD, _("The information does not exist at the public body.")),
+    (Resolution.NOT_HELD, _("The information does not exist at the public agency.")),
     (FilterStatus.OVERDUE, _("The request has not been answered in time.")),
 ]
 
@@ -307,7 +307,7 @@ class FoiRequest(models.Model):
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
-        verbose_name=_("Public Body"),
+        verbose_name=_("Public Agency"),
     )
 
     status = models.CharField(_("Status"), max_length=50, choices=Status.choices)

@@ -14,7 +14,7 @@ class PublicBodySuggestion(models.Model):
         on_delete=models.CASCADE,
     )
     public_body = models.ForeignKey(
-        PublicBody, verbose_name=_("Public Body"), on_delete=models.CASCADE
+        PublicBody, verbose_name=_("Public Agency"), on_delete=models.CASCADE
     )
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -24,11 +24,11 @@ class PublicBodySuggestion(models.Model):
     )
     timestamp = models.DateTimeField(_("Timestamp of Suggestion"), auto_now_add=True)
     reason = models.TextField(
-        _("Reason this Public Body fits the request"), blank=True, default=""
+        _("Reason this Public Agency fits the request"), blank=True, default=""
     )
 
     class Meta:
         get_latest_by = "timestamp"
         ordering = ("timestamp",)
-        verbose_name = _("Public Body Suggestion")
-        verbose_name_plural = _("Public Body Suggestions")
+        verbose_name = _("Public Agency Suggestion")
+        verbose_name_plural = _("Public Agency Suggestions")

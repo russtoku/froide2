@@ -24,17 +24,17 @@ Features
 - Froide uses many of the built-in Django features like the Admin interface to
   manage and update entities in the system, the internationalization
   system, and the user management and authentication.
-- Freedom of Information Laws and Public Entities are connected through a many-to-many relationship. That allows for a Public Body to be accountable under different laws.
-- A Public Body can have a parent to represent hierarchies from the real
+- Freedom of Information Laws and Public Entities are connected through a many-to-many relationship. That allows for a Public Agency to be accountable under different laws.
+- A Public Agency can have a parent to represent hierarchies from the real
   world. They can also be categorized into classifications (e.g. ministry, council) and topical tags (e.g. environment, military) which can be defined separately.
-- Users can create requests without a Public Body so that others can
+- Users can create requests without a Public Agency so that others can
   suggest an appropriate recipient later.
 - Requests can optionally be kept private by users and published at a
   later point (e.g. after a related article has been published).
-- Requests are mailed to Public Bodies through the platform via a special,
+- Requests are mailed to Public Agencies through the platform via a special,
   request-unique email address (using SMTP) and the platform will receive answers on
   that mail address (by accessing an IMAP account).
-- Search functionality for Requests and Public Bodies.
+- Search functionality for Requests and Public Agencies.
 - A read/write REST-API
 - Redaction of PDFs
 

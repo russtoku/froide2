@@ -4,7 +4,7 @@ from django.utils import translation
 
 
 class Command(BaseCommand):
-    help = "Loads public bodies"
+    help = "Loads public agencies"
 
     def add_arguments(self, parser):
         parser.add_argument("filename", type=str)

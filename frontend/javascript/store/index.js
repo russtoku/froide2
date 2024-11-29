@@ -106,7 +106,7 @@ export default createStore({
         .filter((law) => law !== undefined)
     },
     defaultLaw: (state, getters) => {
-      // Get first key in scoped public bodies
+      // Get first key in scoped public agencies
       const key = Object.keys(state.scopedPublicBodies)[0]
       const pbs = state.scopedPublicBodies[key] || []
       let lastLaw = null

@@ -17,8 +17,8 @@ class Migration(migrations.Migration):
             name="ProposedPublicBody",
             fields=[],
             options={
-                "verbose_name": "Proposed Public Body",
-                "verbose_name_plural": "Proposed Public Bodies",
+                "verbose_name": "Proposed Public Agency",
+                "verbose_name_plural": "Proposed Public Agencies",
                 "proxy": True,
                 "indexes": [],
             },

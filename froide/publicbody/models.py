@@ -254,8 +254,8 @@ class PublicBodyTag(TagBase):
     objects = PublicBodyTagManager()
 
     class Meta:
-        verbose_name = _("Public Body Tag")
-        verbose_name_plural = _("Public Body Tags")
+        verbose_name = _("Public Agency Tag")
+        verbose_name_plural = _("Public Agency Tags")
 
 
 class TaggedPublicBody(TaggedItemBase):
@@ -265,8 +265,8 @@ class TaggedPublicBody(TaggedItemBase):
     content_object = models.ForeignKey("PublicBody", on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = _("Tagged Public Body")
-        verbose_name_plural = _("Tagged Public Bodies")
+        verbose_name = _("Tagged Public Agency")
+        verbose_name_plural = _("Tagged Public Agencies")
 
 
 class CategoryManager(MP_NodeManager):
@@ -307,8 +307,8 @@ class CategorizedPublicBody(TaggedItemBase):
     content_object = models.ForeignKey("PublicBody", on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = _("Categorized Public Body")
-        verbose_name_plural = _("Categorized Public Bodies")
+        verbose_name = _("Categorized Public Agency")
+        verbose_name_plural = _("Categorized Public Agencies")
 
 
 class ClassificationManager(MP_NodeManager):
@@ -465,9 +465,9 @@ class PublicBody(models.Model):
 
     class Meta:
         ordering = ("name",)
-        verbose_name = _("Public Body")
-        verbose_name_plural = _("Public Bodies")
-        permissions = (("moderate", _("Can moderate public bodies")),)
+        verbose_name = _("Public Agency")
+        verbose_name_plural = _("Public Agencies")
+        permissions = (("moderate", _("Can moderate public agencies")),)
 
     serializable_fields = (
         "id",
@@ -647,8 +647,8 @@ class ProposedPublicBody(PublicBody):
     class Meta:
         proxy = True
         ordering = ("-created_at",)
-        verbose_name = _("Proposed Public Body")
-        verbose_name_plural = _("Proposed Public Bodies")
+        verbose_name = _("Proposed Public Agency")
+        verbose_name_plural = _("Proposed Public Agencies")
 
 
 class CategorizedPublicBodyChangeProposal(TaggedItemBase):
@@ -662,8 +662,8 @@ class CategorizedPublicBodyChangeProposal(TaggedItemBase):
     )
 
     class Meta:
-        verbose_name = _("Categorized Public Body Change Proposal")
-        verbose_name_plural = _("Categorized Public Body Change Proposals")
+        verbose_name = _("Categorized Public Agency Change Proposal")
+        verbose_name_plural = _("Categorized Public Agency Change Proposals")
 
 
 class PublicBodyChangeProposal(models.Model):
@@ -710,8 +710,8 @@ class PublicBodyChangeProposal(models.Model):
 
     class Meta:
         ordering = ("-created_at",)
-        verbose_name = _("Proposed Public Body Change")
-        verbose_name_plural = _("Proposed Public Body Changes")
+        verbose_name = _("Proposed Public Agency Change")
+        verbose_name_plural = _("Proposed Public Agency Changes")
         constraints = [
             models.UniqueConstraint(
                 fields=["publicbody", "user"], name="unique_publicbody_user_change"

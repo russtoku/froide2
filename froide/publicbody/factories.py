@@ -40,7 +40,7 @@ class PublicBodyTagFactory(DjangoModelFactory):
     class Meta:
         model = PublicBodyTag
 
-    name = factory.Sequence(lambda n: "Public Body Tag {0}".format(n))
+    name = factory.Sequence(lambda n: "Public Agency Tag {0}".format(n))
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
 
 

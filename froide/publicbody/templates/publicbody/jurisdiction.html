@@ -13,19 +13,19 @@
                             {% blocktrans with name=object.name %}Freedom of Information<br />in {{ name }}{% endblocktrans %}
                         {% endblock %}
                     </h1>
-                    <h2>{% blocktrans %}Ask Public Bodies for administrative information — it's your right.{% endblocktrans %}</h2>
+                    <h2>{% blocktrans %}Ask Public Agencies for administrative information — it's your right.{% endblocktrans %}</h2>
                 </div>
             </div>
             <div class="pb-5">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{% trans "Which Public Bodies?" %}</h5>
+                        <h5 class="card-title">{% trans "Which Public Agencies?" %}</h5>
                         {% url 'publicbody-list' jurisdiction=object.slug as pb_url %}
                         <p class="card-text">{% trans "All bodies that work on administrative tasks of this jurisdiction." %}</p>
                     </div>
                     <div class="card-footer text-center">
                         <a class="btn btn-secondary" href="{{ pb_url }}">
-                            {% blocktrans with pb_count=pb_count %}Check out the {{ pb_count }} Public Bodies.{% endblocktrans %}
+                            {% blocktrans with pb_count=pb_count %}Check out the {{ pb_count }} Public Agencies.{% endblocktrans %}
                         </a>
                     </div>
                 </div>

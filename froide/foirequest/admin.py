@@ -757,7 +757,7 @@ class MessageTagAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
     actions = ["export_csv"]
 
-    @admin.action(description=_("Export public body tag stats to CSV"))
+    @admin.action(description=_("Export public agency tag stats to CSV"))
     def export_csv(self, request, queryset):
         from froide.publicbody.models import PublicBody
 

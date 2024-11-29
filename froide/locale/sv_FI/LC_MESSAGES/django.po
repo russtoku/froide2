@@ -122,7 +122,7 @@ msgstr "Adress"
 #: froide/account/forms.py:34
 msgid ""
 "Optional. Your address will not be displayed publicly and is only needed in "
-"case a public body needs to send you paper."
+"case a public agency needs to send you paper."
 msgstr ""
 "Valfri. Din adress kommer inte att visas offentligt och behövs endast om en "
 "myndighet behöver sända dig papper."
@@ -160,7 +160,7 @@ msgstr "Visa inte mitt namn på webben"
 
 #: froide/account/forms.py:61
 msgid ""
-"If you check this, your name will still appear in requests to public bodies, "
+"If you check this, your name will still appear in requests to public agencies, "
 "but we will do our best to not display it publicly. However, we cannot "
 "guarantee your anonymity"
 msgstr ""
@@ -1126,7 +1126,7 @@ msgid "requester"
 msgstr "begäran"
 
 #: froide/foirequest/forms.py:31
-msgid "Search for a topic or a public body:"
+msgid "Search for a topic or a public agency:"
 msgstr "Sök ämne eller myndighet:"
 
 #: froide/foirequest/forms.py:38
@@ -1158,11 +1158,11 @@ msgid "Information Law"
 msgstr "Offentlighetslagen"
 
 #: froide/foirequest/forms.py:87
-msgid "You are not allowed to create a new public body"
+msgid "You are not allowed to create a new public agency"
 msgstr "Du har inte tillstånd att skapa en ny offentlig organisation."
 
 #: froide/foirequest/forms.py:91
-msgid "You must specify a public body"
+msgid "You must specify a public agency"
 msgstr "Du måste specificera en offentlig organisation"
 
 #: froide/foirequest/forms.py:97 froide/foirequest/forms.py:101
@@ -1175,7 +1175,7 @@ msgid "Invalid Information Law"
 msgstr "Ogiltig lag"
 
 #: froide/foirequest/forms.py:157
-msgid "Sending Public Body"
+msgid "Sending Public Agency"
 msgstr "Avsändande myndighet"
 
 #: froide/foirequest/forms.py:181
@@ -1199,7 +1199,7 @@ msgstr "Skicka gatuadress"
 
 #: froide/foirequest/forms.py:203
 msgid ""
-"If the public body is asking for your post address, check this and we will "
+"If the public agency is asking for your post address, check this and we will "
 "append it to your message."
 msgstr ""
 "Om myndigheten begär din adress, kryssa för här och vi lägger den till ditt "
@@ -1207,12 +1207,12 @@ msgstr ""
 
 #: froide/foirequest/forms.py:232 froide/foirequest/forms.py:463
 #, fuzzy
-#| msgid "Public Body"
-msgid "Public body"
+#| msgid "Public Agency"
+msgid "Public agency"
 msgstr "Offentlig Organisation"
 
 #: froide/foirequest/forms.py:236
-msgid "Please specify a reason why this is the right Public Body:"
+msgid "Please specify a reason why this is the right Public Agency:"
 msgstr "Var god och specificera en orsak till varför detta är rätt myndighet:"
 
 #: froide/foirequest/forms.py:237
@@ -1247,7 +1247,7 @@ msgstr "Ingen eller annan orsak angiven"
 
 #: froide/foirequest/forms.py:307
 msgid ""
-"When you are (partially) denied access to information, the Public Body "
+"When you are (partially) denied access to information, the Public Agency "
 "should always state the reason."
 msgstr ""
 "Om du (delvis) nekas tillgång till information, måste myndigheten alltid "
@@ -1279,8 +1279,8 @@ msgstr "Vidarebefordrad till"
 
 #: froide/foirequest/forms.py:327
 msgid ""
-"If your message is redirected to a different Public Body, please specify the "
-"new Public Body"
+"If your message is redirected to a different Public Agency, please specify the "
+"new Public Agency"
 msgstr ""
 "Om ditt meddelande vidarebefordras till en annan myndighet, var god ange den "
 "nya myndigheten"
@@ -1290,11 +1290,11 @@ msgid "Costs"
 msgstr "Kostnader"
 
 #: froide/foirequest/forms.py:335
-msgid "Please specify what the Public Body charges for the information."
+msgid "Please specify what the Public Agency charges for the information."
 msgstr "Var god ange vad myndigheten tar betalt för informationen."
 
 #: froide/foirequest/forms.py:349
-msgid "Provide the redirected public body!"
+msgid "Provide the redirected public agency!"
 msgstr "Ange den nya myndigheten!"
 
 #: froide/foirequest/forms.py:356
@@ -1358,8 +1358,8 @@ msgstr "Du måste lägga till antingen brevtexten eller ett inskannat dokument."
 
 #: froide/foirequest/forms.py:560
 #, fuzzy
-#| msgid "Sending Public Body"
-msgid "Sender public body"
+#| msgid "Sending Public Agency"
+msgid "Sender public agency"
 msgstr "Avsändande myndighet"
 
 #: froide/foirequest/forms.py:562
@@ -1386,8 +1386,8 @@ msgstr ""
 
 #: froide/foirequest/forms.py:581
 #, fuzzy
-#| msgid "Sending Public Body"
-msgid "Receiving public body"
+#| msgid "Sending Public Agency"
+msgid "Receiving public agency"
 msgstr "Avsändande myndighet"
 
 #: froide/foirequest/forms.py:583 froide/foirequest/forms.py:585
@@ -1426,20 +1426,20 @@ msgid "The requester's email address is yet to be confirmed."
 msgstr "Begärarens e-postadress är ännu inte bekräftad."
 
 #: froide/foirequest/models.py:154
-msgid "Public Body needed"
+msgid "Public Agency needed"
 msgstr "Offentlig Organisation behövs"
 
 #: froide/foirequest/models.py:155
-msgid "This request still needs a Public Body."
+msgid "This request still needs a Public Agency."
 msgstr "Begäran behöver fortfarande en myndighet."
 
 #: froide/foirequest/models.py:159
-msgid "Awaiting Public Body confirmation"
+msgid "Awaiting Public Agency confirmation"
 msgstr "Inväntar bekräftelse av Offentlig Organisation"
 
 #: froide/foirequest/models.py:160
 msgid ""
-"The Public Body of this request has been created by the user and still needs "
+"The Public Agency of this request has been created by the user and still needs "
 "to be confirmed."
 msgstr ""
 "Myndigheten för denna begäran har skapats av användaren och behöver "
@@ -1450,7 +1450,7 @@ msgid "Awaiting response"
 msgstr "Inväntar svar"
 
 #: froide/foirequest/models.py:165
-msgid "This request is still waiting for a response from the Public Body."
+msgid "This request is still waiting for a response from the Public Agency."
 msgstr "Denna begäran väntar fortfarande på ett svar från myndigheten."
 
 #: froide/foirequest/models.py:169
@@ -1504,7 +1504,7 @@ msgid "Information not held"
 msgstr "Information finns inte"
 
 #: froide/foirequest/models.py:197
-msgid "The Public Body stated that it does not possess the information."
+msgid "The Public Agency stated that it does not possess the information."
 msgstr "Den myndighet uppgav att de inte har informationen."
 
 #: froide/foirequest/models.py:201
@@ -1512,7 +1512,7 @@ msgid "Request refused"
 msgstr "Begäran avslagen"
 
 #: froide/foirequest/models.py:202
-msgid "The Public Body refuses to provide the information."
+msgid "The Public Agency refuses to provide the information."
 msgstr "Myndigheten ger inte ut informationen."
 
 #: froide/foirequest/models.py:206
@@ -1621,7 +1621,7 @@ msgstr "Sammanfattning"
 #: froide/foirequest/models.py:1559
 #: froide/foirequest/templates/foirequest/snippets/message.html:39
 #: froide/publicbody/models.py:305
-msgid "Public Body"
+msgid "Public Agency"
 msgstr "Offentlig Organisation"
 
 #: froide/foirequest/models.py:283
@@ -1799,15 +1799,15 @@ msgid "Timestamp of Suggestion"
 msgstr "Förslagets tidsstämpel"
 
 #: froide/foirequest/models.py:1127
-msgid "Reason this Public Body fits the request"
+msgid "Reason this Public Agency fits the request"
 msgstr "Orsaken till att denna myndighet är lämplig för begäran"
 
 #: froide/foirequest/models.py:1133
-msgid "Public Body Suggestion"
+msgid "Public Agency Suggestion"
 msgstr "Offentliga Organisationer förslag"
 
 #: froide/foirequest/models.py:1134
-msgid "Public Body Suggestions"
+msgid "Public Agency Suggestions"
 msgstr "Offentliga Organisationer förslag"
 
 #: froide/foirequest/models.py:1147
@@ -1843,7 +1843,7 @@ msgid "From Name"
 msgstr "Från namn"
 
 #: froide/foirequest/models.py:1169
-msgid "From Public Body"
+msgid "From Public Agency"
 msgstr "Från Offentlig Organisation"
 
 #: froide/foirequest/models.py:1171
@@ -1855,7 +1855,7 @@ msgid "Recipient Email"
 msgstr "Mottagarens e-post"
 
 #: froide/foirequest/models.py:1177
-msgid "Public Body Recipient"
+msgid "Public Agency Recipient"
 msgstr "Mottagande myndighet"
 
 #: froide/foirequest/models.py:1181 froide/foirequest/models.py:1562
@@ -2125,7 +2125,7 @@ msgstr "%(site_name)s: Var god klassificera svaret på din begäran"
 
 #: froide/foirequest/signals.py:95
 #, python-format
-msgid "%(site_name)s: New suggestion for a Public Body"
+msgid "%(site_name)s: New suggestion for a Public Agency"
 msgstr "%(site_name)s: Din begäran har fått ett förslag på myndighet"
 
 #: froide/foirequest/signals.py:132
@@ -2219,7 +2219,7 @@ msgid ""
 "\n"
 "Your request \"%(title)s\" was not answered in the required time and became "
 "overdue.\n"
-"We recommend that you send another message to the public body to check the "
+"We recommend that you send another message to the public agency to check the "
 "status of the request and if they received it.\n"
 "\n"
 "If you received a postal answer, please add it to the request.\n"
@@ -2486,7 +2486,7 @@ msgstr ""
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"you received a suggestion for a Public Body on your request '%(title)s'."
+"you received a suggestion for a Public Agency on your request '%(title)s'."
 msgstr ""
 "Hej %(name)s,\n"
 "\n"
@@ -2502,7 +2502,7 @@ msgstr "Följande orsak angavs:"
 
 #: froide/foirequest/templates/foirequest/emails/public_body_suggestion_received.txt:9
 msgid ""
-"If you want to use this Public Body, go to your request and chose the Public "
+"If you want to use this Public Agency, go to your request and chose the Public "
 "Body from the list. Here is a link to your request:"
 msgstr ""
 "Om du vill vända dig till denna myndighet, gå till din begäran och välj "
@@ -2593,7 +2593,7 @@ msgstr "Begäranden gällande ämnet \"%(name)s\""
 
 #: froide/foirequest/templates/foirequest/list.html:37
 #, python-format
-msgid "Filtered by requests to Public Bodies in %(name)s."
+msgid "Filtered by requests to Public Agencies in %(name)s."
 msgstr "Avgränsad enligt begäranden till myndigheter i %(name)s."
 
 #: froide/foirequest/templates/foirequest/list.html:60
@@ -2821,7 +2821,7 @@ msgstr "Laddar PDF ..."
 
 #: froide/foirequest/templates/foirequest/request.html:17
 #: froide/foirequest/templates/foirequest/request.html:174
-msgid "Visit the website of this Public Body"
+msgid "Visit the website of this Public Agency"
 msgstr "Besök webbplatsen för denna myndighet"
 
 #: froide/foirequest/templates/foirequest/request.html:19
@@ -2837,13 +2837,13 @@ msgid "Search the internet for information about:"
 msgstr "Sök på internet information om:"
 
 #: froide/foirequest/templates/foirequest/request.html:22
-msgid "Search Public Body Website"
+msgid "Search Public Agency Website"
 msgstr "Sök på Offentlig Organisations webbplats"
 
 #: froide/foirequest/templates/foirequest/request.html:24
 msgid ""
 "We found an email address in your text: {{ email }}. Do not sent personal "
-"data to the Public Body."
+"data to the Public Agency."
 msgstr ""
 "Vi hittade en e-postadress i din text: {{ email }}. Skicka inte "
 "personuppgifter till myndigheten."
@@ -2876,7 +2876,7 @@ msgid "Write a request"
 msgstr "Skriv en begäran"
 
 #: froide/foirequest/templates/foirequest/request.html:54
-msgid "Choose a Public Body"
+msgid "Choose a Public Agency"
 msgstr "Välj myndighet"
 
 #: froide/foirequest/templates/foirequest/request.html:62
@@ -2884,19 +2884,19 @@ msgid "To:"
 msgstr "Till:"
 
 #: froide/foirequest/templates/foirequest/request.html:73
-msgid "Notes for this public body"
+msgid "Notes for this public agency"
 msgstr "Anteckningar för denna offentliga aktör"
 
 #: froide/foirequest/templates/foirequest/request.html:94
 msgid ""
-"Don't select a public body for now. Let others help to find the right Public "
+"Don't select a public agency for now. Let others help to find the right Public "
 "Body later."
 msgstr ""
 "Välj inte en Offentlig Organisation nu. Låt andra hjälpa att hitta den rätta "
 "Offentliga Organisationen senare."
 
 #: froide/foirequest/templates/foirequest/request.html:102
-msgid "Create a new public body on the fly."
+msgid "Create a new public agency on the fly."
 msgstr "Skapa en ny Offentlig Organisation i förbifarten."
 
 #: froide/foirequest/templates/foirequest/request.html:110
@@ -2952,14 +2952,14 @@ msgstr "En begäran angående ett ärende som involverar dig"
 msgid ""
 "If you want to ask a question that relates to you personally, like how you "
 "can achieve something or who you have to contact, you need publicly "
-"available information from that public body:"
+"available information from that public agency:"
 msgstr ""
 "Om du vill ställa en fråga som gäller dig personligen, till exempel hur du "
 "kan uppnå någonting eller vem du borde ta kontakt med, behöver du "
 "information som finns allmänt tillgänglig hos myndigheten:"
 
 #: froide/foirequest/templates/foirequest/request.html:174
-msgid "Click here to go to 115.de - the Public Body Service Hotline"
+msgid "Click here to go to 115.de - the Public Agency Service Hotline"
 msgstr "Klicka här för att gå till myndighetsportalen."
 
 #: froide/foirequest/templates/foirequest/request.html:179
@@ -2976,7 +2976,7 @@ msgstr "En begäran om ett utlåtande"
 #: froide/foirequest/templates/foirequest/request.html:193
 msgid ""
 "In order to ask about a political state, you need to talk to people not "
-"public bodies. Please ask your Member of Parliament about the topic you are "
+"public agencies. Please ask your Member of Parliament about the topic you are "
 "interested in:"
 msgstr ""
 "För att fråga om ett politiskt läge, bör du tala med människor som inte "
@@ -3085,7 +3085,7 @@ msgid "Search this site for %(topic)s"
 msgstr "Sök denna webbsida efter %(topic)s"
 
 #: froide/foirequest/templates/foirequest/request.html:428
-msgid "Explore other requests made to this Public Body"
+msgid "Explore other requests made to this Public Agency"
 msgstr "Undersök andra begäranden gjorda till denna Offentliga Organisation."
 
 #: froide/foirequest/templates/foirequest/request.html:435
@@ -3171,7 +3171,7 @@ msgstr ""
 #: froide/foirequest/templates/foirequest/show.html:56
 msgid ""
 "Have you not gotten any reply? &rarr; <a data-tabgo=\"tab\" href=\"#write-"
-"message\">Write a reminder to the public body!</a>"
+"message\">Write a reminder to the public agency!</a>"
 msgstr ""
 "Har du fått något svar? &rarr; <a data-tabgo=\"tab\" href=\"#write-message"
 "\">Skriv en påminnelse till myndigheten!</a>"
@@ -3187,7 +3187,7 @@ msgstr "Överväg att sända ett brev till ett ombud"
 #: froide/foirequest/templates/foirequest/show.html:71
 msgid ""
 "This request is not an FoI request. This site is only for requesting "
-"specific information from public bodies."
+"specific information from public agencies."
 msgstr ""
 "Denna begäran är inte en offentlighetsbegäran. Denna webbplats är avsedd "
 "endast för att att begära specifik information av myndigheter."
@@ -3210,7 +3210,7 @@ msgid "Set status"
 msgstr "Välj status"
 
 #: froide/foirequest/templates/foirequest/show.html:116
-msgid "Choose Public Body"
+msgid "Choose Public Agency"
 msgstr "Välj myndighet"
 
 #: froide/foirequest/templates/foirequest/show.html:123
@@ -3254,14 +3254,14 @@ msgstr "Ange ny status"
 
 #: froide/foirequest/templates/foirequest/show.html:201
 msgid ""
-"As the author of this request, please choose a public body from one of the "
+"As the author of this request, please choose a public agency from one of the "
 "suggestions:"
 msgstr ""
 "Som upphovsman till denna begäran, var god och välj en myndighet bland dessa "
 "förslag:"
 
 #: froide/foirequest/templates/foirequest/show.html:205
-msgid "Send this request to the selected Public Body"
+msgid "Send this request to the selected Public Agency"
 msgstr "Sänd denna begäran till den valda myndigheten"
 
 #: froide/foirequest/templates/foirequest/show.html:217
@@ -3341,7 +3341,7 @@ msgid "You can attach more documents to your letter later."
 msgstr "Du kan bifoga flera dokument till detta svar senare."
 
 #: froide/foirequest/templates/foirequest/show.html:302
-msgid "Send message to public body"
+msgid "Send message to public agency"
 msgstr "Skicka meddelande till offentlig myndighet"
 
 #: froide/foirequest/templates/foirequest/show.html:304
@@ -3353,7 +3353,7 @@ msgstr ""
 "myndigheten!"
 
 #: froide/foirequest/templates/foirequest/show.html:306
-msgid "You can send another message to this Public Body if you want to."
+msgid "You can send another message to this Public Agency if you want to."
 msgstr "Du kan skicka myndigheten ännu ett meddelande om du vill."
 
 #: froide/foirequest/templates/foirequest/show.html:320
@@ -3410,11 +3410,11 @@ msgid "Save Summary"
 msgstr "Spara sammandrag"
 
 #: froide/foirequest/templates/foirequest/show.html:377
-msgid "You can suggest a public body for this request."
+msgid "You can suggest a public agency for this request."
 msgstr "Du kan föreslå en myndighet för denna begäran."
 
 #: froide/foirequest/templates/foirequest/show.html:380
-msgid "The following public bodies have already been suggested:"
+msgid "The following public agencies have already been suggested:"
 msgstr "Följande myndigheter har redan föreslagits:"
 
 #: froide/foirequest/templates/foirequest/show.html:386
@@ -3430,7 +3430,7 @@ msgid "There are no suggestions yet"
 msgstr "Inga förslag ännu"
 
 #: froide/foirequest/templates/foirequest/show.html:403
-msgid "Suggest this Public Body"
+msgid "Suggest this Public Agency"
 msgstr "Föreslå denna myndighet"
 
 #: froide/foirequest/templates/foirequest/show.html:411
@@ -3492,7 +3492,7 @@ msgstr "Sammanfattning av beslutet"
 
 #: froide/foirequest/templates/foirequest/show.html:482
 msgid ""
-"This request was not sent yet, because it still needs a Public Body as a "
+"This request was not sent yet, because it still needs a Public Agency as a "
 "recipient."
 msgstr ""
 "Denna begäran är ännu inte avsänd, eftersom den fortfarande behöver en "
@@ -3508,7 +3508,7 @@ msgstr ""
 
 #: froide/foirequest/templates/foirequest/show.html:494
 msgid ""
-"The public body of this request has been created by the user and still needs "
+"The public agency of this request has been created by the user and still needs "
 "to be confirmed."
 msgstr ""
 "Denna myndighet är tillagd av användaren och behöver ännu bli bekräftad."
@@ -3704,11 +3704,11 @@ msgid "change"
 msgstr "ändra"
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:19
-msgid "Set the Public Body that sent this message:"
+msgid "Set the Public Agency that sent this message:"
 msgstr "Välj myndighet som skickat detta meddelande:"
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:21
-msgid "Set Sending Public Body"
+msgid "Set Sending Public Agency"
 msgstr "Välj avsändande myndighet"
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:53
@@ -3796,7 +3796,7 @@ msgid "latest"
 msgstr "senaste"
 
 #. Translators: part in request filter URL
-#. Translators: part in Public Body URL
+#. Translators: part in Public Agency URL
 #: froide/foirequest/urls.py:37 froide/foirequest/urls.py:39
 #: froide/foirequest/urls.py:41 froide/publicbody/urls.py:13
 #: froide/publicbody/urls.py:18
@@ -3844,14 +3844,14 @@ msgstr ""
 "Det fanns fel i det inlämnade formuläret. Var vänlig granska och försök igen."
 
 #: froide/foirequest/views.py:465
-msgid "Others can now suggest the Public Bodies for your request."
+msgid "Others can now suggest the Public Agencies for your request."
 msgstr ""
 "Andra kan nu föreslå till vilken Offentlig Organisation din begäran ska "
 "sändas."
 
 #: froide/foirequest/views.py:468
 msgid ""
-"Your request will be sent as soon as the newly created Public Body was "
+"Your request will be sent as soon as the newly created Public Agency was "
 "confirmed by an administrator."
 msgstr ""
 "Din begäran kommer att sändas så snart den nya Offentliga Organisationen "
@@ -3876,7 +3876,7 @@ msgid "Missing or invalid input!"
 msgstr "Värde saknas eller är ogiltigt!"
 
 #: froide/foirequest/views.py:502
-msgid "This request doesn't need a Public Body!"
+msgid "This request doesn't need a Public Agency!"
 msgstr "Denna begäran behöver inte en Offentlig Organisation!"
 
 #: froide/foirequest/views.py:514
@@ -3885,15 +3885,15 @@ msgid "Request was sent to: %(name)s."
 msgstr "Begäran sändes till: %(name)s."
 
 #: froide/foirequest/views.py:535
-msgid "Your Public Body suggestion has been added."
+msgid "Your Public Agency suggestion has been added."
 msgstr "Din myndighet har lagts till."
 
 #: froide/foirequest/views.py:538
-msgid "This Public Body has already been suggested."
+msgid "This Public Agency has already been suggested."
 msgstr "Denna myndighet har redan föreslagits."
 
 #: froide/foirequest/views.py:541
-msgid "You need to specify a Public Body!"
+msgid "You need to specify a Public Agency!"
 msgstr "Du måste ange en myndighet!"
 
 #: froide/foirequest/views.py:554
@@ -4353,7 +4353,7 @@ msgid "Enter comma-separated tags here"
 msgstr "Lägg in komma-separereade taggar här"
 
 #: froide/publicbody/forms.py:7
-msgid "Name of Public Body"
+msgid "Name of Public Agency"
 msgstr "Myndighetens namn"
 
 #: froide/publicbody/forms.py:8
@@ -4365,7 +4365,7 @@ msgid "Email Address for Freedom of Information Requests"
 msgstr "E-postadress för begäran om offentlig information"
 
 #: froide/publicbody/forms.py:12
-msgid "Homepage URL of Public Body"
+msgid "Homepage URL of Public Agency"
 msgstr "Adress till myndighetens webbplats"
 
 #. Translators: URL part
@@ -4473,19 +4473,19 @@ msgid "rank"
 msgstr "rankning"
 
 #: froide/publicbody/models.py:208
-msgid "Public Body Tag"
+msgid "Public Agency Tag"
 msgstr "Offentlig Aktör Tagg"
 
 #: froide/publicbody/models.py:209
-msgid "Public Body Tags"
+msgid "Public Agency Tags"
 msgstr "Offentliga Aktör Taggar"
 
 #: froide/publicbody/models.py:218
-msgid "Tagged Public Body"
+msgid "Tagged Public Agency"
 msgstr "Taggad Offentlig Aktör"
 
 #: froide/publicbody/models.py:219
-msgid "Tagged Public Bodies"
+msgid "Tagged Public Agencies"
 msgstr "Taggade Offentliga Aktörer"
 
 #: froide/publicbody/models.py:250
@@ -4552,17 +4552,17 @@ msgstr "Antal förfrågningar"
 #: froide/publicbody/templates/publicbody/base.html:5
 #: froide/publicbody/templates/publicbody/list.html:10
 #: froide/templates/base.html:36
-msgid "Public Bodies"
+msgid "Public Agencies"
 msgstr "Myndigheter"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html:6
 #, fuzzy
-#| msgid "Reason this Public Body fits the request"
-msgid "This public body's requests"
+#| msgid "Reason this Public Agency fits the request"
+msgid "This public agency's requests"
 msgstr "Orsaken till att denna myndighet är lämplig för begäran"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html:12
-msgid "Confirm this Public Body "
+msgid "Confirm this Public Agency "
 msgstr "Bekräfta denna myndighet"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_list.html:9
@@ -4594,13 +4594,13 @@ msgid "Ministry of Labour"
 msgstr "Arbets- och näringsministeriet"
 
 #: froide/publicbody/templates/publicbody/_chooser.html:59
-msgid "No Public Bodies found for this query."
+msgid "No Public Agencies found for this query."
 msgstr "Inga myndigheter hittades i denna sökning."
 
 #: froide/publicbody/templates/publicbody/_chooser.html:64
 #, python-format
 msgid ""
-"Are we missing a public body? <a href=\"%(url)s\">Please let us know!</a>"
+"Are we missing a public agency? <a href=\"%(url)s\">Please let us know!</a>"
 msgstr ""
 "Saknar vi en myndighet? <a href=\"%(url)s\">Var snäll och berätta det för "
 "oss!</a>"
@@ -4611,11 +4611,11 @@ msgid "Freedom of Information<br/>in %(name)s"
 msgstr "Offentlighetsbegäran<br/>i %(name)s"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:21
-msgid "Ask Public Bodies for administrative information — it's your right."
+msgid "Ask Public Agencies for administrative information — it's your right."
 msgstr "Begär administrativ information av myndigheter — det är din rättighet."
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:32
-msgid "Which Public Bodies?"
+msgid "Which Public Agencies?"
 msgstr "Vilka myndigheter?"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:36
@@ -4625,7 +4625,7 @@ msgstr "Alla myndigheter verksamma inom detta område."
 #: froide/publicbody/templates/publicbody/jurisdiction.html:39
 #, python-format
 msgid ""
-"Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Bodies.</a>"
+"Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Agencies.</a>"
 msgstr ""
 "Gör en begäran till en av <a href=\"%(url)s\">%(pb_count)s myndigheter.</a>"
 
@@ -4691,11 +4691,11 @@ msgid "Search Terms"
 msgstr "Söktermer"
 
 #: froide/publicbody/templates/publicbody/list.html:25
-msgid "Search Public Bodies"
+msgid "Search Public Agencies"
 msgstr "Sök Offentliga Aktörer"
 
 #: froide/publicbody/templates/publicbody/list.html:59
-msgid "Show all public bodies"
+msgid "Show all public agencies"
 msgstr "Visa alla offentliga aktörer"
 
 #: froide/publicbody/templates/publicbody/list.html:80
@@ -4708,7 +4708,7 @@ msgid "%(name)s is a %(classification)s in %(juris)s on %(site_name)s"
 msgstr "%(name)s är en %(classification)s i %(juris)s på %(site_name)s"
 
 #: froide/publicbody/templates/publicbody/show.html:18
-msgid "Make a Request to this public body!"
+msgid "Make a Request to this public agency!"
 msgstr "Gör en begäran till denna myndighet!"
 
 #: froide/publicbody/templates/publicbody/show.html:28
@@ -4753,17 +4753,17 @@ msgstr "Sammanfattning av Resultat"
 
 #: froide/publicbody/templates/publicbody/show.html:107
 #, python-format
-msgid "One requests to this public body"
-msgid_plural "%(count)s requests to this public body"
+msgid "One requests to this public agency"
+msgid_plural "%(count)s requests to this public agency"
 msgstr[0] "En begäran till denna offentliga aktör"
 msgstr[1] "%(count)s begäranden till denna offentliga aktör"
 
 #: froide/publicbody/templates/publicbody/show.html:130
-msgid "See all FOI requests for this public body"
+msgid "See all FOI requests for this public agency"
 msgstr "Se alla offentlighetsbegäranden för denna offentliga aktör"
 
 #: froide/publicbody/templates/publicbody/show.html:135
-msgid "There are no requests for this public body yet"
+msgid "There are no requests for this public agency yet"
 msgstr "Det finns inga begäranden för denna offentliga aktör än"
 
 #: froide/publicbody/templates/publicbody/show_foilaw.html:9
@@ -4814,7 +4814,7 @@ msgid "You need to provide a url."
 msgstr "Du måste ange en webbadress."
 
 #: froide/publicbody/views.py:135
-msgid "Public Bodies were imported."
+msgid "Public Agencies were imported."
 msgstr "Myndigheter importerade."
 
 #: froide/settings.py:211
@@ -4905,10 +4905,10 @@ msgstr "Sätt dessa taggar för alla objekt"
 
 #: froide/templates/base.html:10
 msgid ""
-"This site is currently in dry run mode. All Public Body mail will go to this "
+"This site is currently in dry run mode. All Public Agency mail will go to this "
 "mail server:"
 msgstr ""
-"This site is currently in dry run mode. All Public Body mail will go to this "
+"This site is currently in dry run mode. All Public Agency mail will go to this "
 "mail server:"
 
 #: froide/templates/base.html:31
@@ -5009,7 +5009,7 @@ msgstr ""
 
 #: froide/templates/index.html:24
 #, python-format
-msgid "Search %(foicount)s requests and %(pbcount)s public bodies:"
+msgid "Search %(foicount)s requests and %(pbcount)s public agencies:"
 msgstr "Sök bland %(foicount)s begäranden och %(pbcount)s myndigheter:"
 
 #: froide/templates/index.html:32 froide/templates/search/search.html:17
@@ -5067,7 +5067,7 @@ msgstr "Vad är Offentlighetsbegäran?"
 #: froide/templates/index.html:104
 msgid ""
 "Every citizen has the right under the Freedom of Information Laws to ask for "
-"and receive access to information from Public Bodies concerning public "
+"and receive access to information from Public Agencies concerning public "
 "affairs."
 msgstr ""
 "Varje medborgare har enligt offentlighetslagen rätt att av myndigheter "
@@ -5119,7 +5119,7 @@ msgstr "nästa"
 #. Translators: meta keywords
 #: froide/templates/scaffold.html:20
 msgid ""
-"Freedom of Information Requests, Freedom of Information Law, Public Body "
+"Freedom of Information Requests, Freedom of Information Law, Public Agency "
 "Information"
 msgstr ""
 "Offentlighetsbegäran, Lagen om offentlighet, Information om myndigheter"
@@ -5128,7 +5128,7 @@ msgstr ""
 #: froide/templates/scaffold.html:22
 #, python-format
 msgid ""
-"%(site)s helps you to make freedom of information requests to public bodies"
+"%(site)s helps you to make freedom of information requests to public agencies"
 msgstr "%(site)s hjälper dig att begära information av myndigheter"
 
 #: froide/templates/search/search.html:7
@@ -5154,16 +5154,16 @@ msgid "You can browse the list of existing requests."
 msgstr "Du kan bläddra i listan av begäranden."
 
 #: froide/templates/search/search.html:43
-msgid "Related Public Bodies"
+msgid "Related Public Agencies"
 msgstr "Relaterade myndigheter"
 
 #: froide/templates/search/search.html:51
 #, python-format
-msgid "No relevant Public bodies found for \"%(query)s\"."
+msgid "No relevant Public agencies found for \"%(query)s\"."
 msgstr "Inga myndigheter hittade för\"%(query)s\"."
 
 #: froide/templates/search/search.html:52
-msgid "You can browse the list of Public Bodies."
+msgid "You can browse the list of Public Agencies."
 msgstr "Du kan bläddra i listan på myndigheter."
 
 #: froide/templates/search/search.html:60
@@ -5420,27 +5420,27 @@ msgstr "integritet"
 #~ msgid "Topic"
 #~ msgstr "Topic"
 
-#~ msgid "Public Bodies by Topic"
-#~ msgstr "Public Bodies by Topic"
+#~ msgid "Public Agencies by Topic"
+#~ msgstr "Public Agencies by Topic"
 
 #~ msgid "in alphabetical order"
 #~ msgstr "in alphabetical order"
 
-#~ msgid "No Public Bodies yet"
-#~ msgstr "No Public Bodies yet"
+#~ msgid "No Public Agencies yet"
+#~ msgstr "No Public Agencies yet"
 
-#~ msgid "Click here to make a request to this Public Body"
-#~ msgstr "Click here to make a request to this Public Body"
+#~ msgid "Click here to make a request to this Public Agency"
+#~ msgstr "Click here to make a request to this Public Agency"
 
-#~ msgid "Search Results for &quot;%(query)s&quot; in Public Bodies"
-#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Bodies"
+#~ msgid "Search Results for &quot;%(query)s&quot; in Public Agencies"
+#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Agencies"
 
 #~ msgid ""
 #~ "\n"
-#~ "%(counter)s Public Body in Topic '%(name)s'"
+#~ "%(counter)s Public Agency in Topic '%(name)s'"
 #~ msgid_plural ""
 #~ "\n"
-#~ "%(counter)s Public Bodies in Topic '%(name)s'"
+#~ "%(counter)s Public Agencies in Topic '%(name)s'"
 #~ msgstr[0] "28129e804577ec6c2115ed2b83e1bf82_pl_0"
 #~ msgstr[1] "28129e804577ec6c2115ed2b83e1bf82_pl_1"
 

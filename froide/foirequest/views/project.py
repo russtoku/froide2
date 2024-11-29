@@ -108,7 +108,7 @@ class ProjectActionView(UpdateView):
                 auth_check=can_write_foiproject,
                 form_class=SendMessageProjectForm,
                 description=gettext(
-                    "Write message to public body in selected requests."
+                    "Write message to public agency in selected requests."
                 ),
                 button=gettext("Send messages"),
                 success=gettext("Messages are being sent now."),

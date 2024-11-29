@@ -34,14 +34,14 @@ entities_url_patterns = [
         name="publicbody-accept",
     ),
     path("", PublicBodySearch.as_view(), name="publicbody-list"),
-    # Translators: part in Public Body URL
+    # Translators: part in Public Agency URL
     path(
         pgettext_lazy("url part", "topic/<slug:category>/"),
         PublicBodySearch.as_view(),
         name="publicbody-list",
     ),
     path("<slug:jurisdiction>/", PublicBodySearch.as_view(), name="publicbody-list"),
-    # Translators: part in Public Body URL
+    # Translators: part in Public Agency URL
     path(
         pgettext_lazy("url part", "<slug:jurisdiction>/topic/<slug:category>/"),
         PublicBodySearch.as_view(),

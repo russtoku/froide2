@@ -37,7 +37,7 @@ class PostalUploadForm(MessageEditMixin, JSONMixin, forms.Form):
     )
 
     publicbody = forms.ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=PublicBody.objects.all(),
         required=True,
         widget=PublicBodySelect,
@@ -168,7 +168,7 @@ class PostalEditForm(MessageEditMixin, JSONMixin, forms.Form):
     )
 
     publicbody = ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=PublicBody.objects.all(),
         required=True,
         widget=HiddenInput(),

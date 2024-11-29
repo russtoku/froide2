@@ -316,7 +316,7 @@ def get_publicbody_for_email(
     if len(pbs) == 1:
         return pbs[0]
     elif foirequest.public_body in pbs:
-        # likely the request's public body
+        # likely the request's public agency
         return foirequest.public_body
 
     if include_deferred:
@@ -414,7 +414,7 @@ def get_emails_from_request_iterator(
     foirequest, include_mediator=True
 ) -> Iterator[PublicBodyEmailInfo]:
     if foirequest.public_body:
-        # Get emails from public body / mediator
+        # Get emails from public agency / mediator
         yield from get_publicbody_emails(
             foirequest.public_body, include_mediator=include_mediator
         )

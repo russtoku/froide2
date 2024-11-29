@@ -8,7 +8,7 @@
         <input v-model="ancestor" @change="ancestorChanged" />
         {{ ancestorName }}
       </dt>
-      <dd>Public Body Category</dd>
+      <dd>Public Agency Category</dd>
       <dt>
         <input v-model="category" @change="categoryChanged" />
         {{ categoryName }}
@@ -18,7 +18,7 @@
         <input v-model="jurisdiction" @change="jurisdictionChanged" />
         {{ jurisdictionName }}
       </dt>
-      <dd>Public Body Search Hint</dd>
+      <dd>Public Agency Search Hint</dd>
       <dt><input v-model="searchHint" /></dt>
     </dl>
     <button @click="load">Load</button>
@@ -32,7 +32,7 @@
         <tr>
           <th>Name</th>
           <th>Type</th>
-          <th>Public Body</th>
+          <th>Public Agency</th>
           <th>Search matches</th>
         </tr>
       </thead>

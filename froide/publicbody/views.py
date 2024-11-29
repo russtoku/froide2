@@ -195,7 +195,7 @@ class PublicBodyProposalView(LoginRequiredMixin, CreateView):
             self.request,
             messages.WARNING,
             _(
-                "You need to register an account and login in order to propose a new public body."
+                "You need to register an account and login in order to propose a new public agency."
             ),
         )
         return super().handle_no_permission()

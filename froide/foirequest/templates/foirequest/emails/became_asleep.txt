@@ -6,7 +6,7 @@ If you received a postal answer, please upload it to the request:
 
 {{ upload_action_url }}
 
-If you have not received an answer, you can send a reminder to the public body:
+If you have not received an answer, you can send a reminder to the public agency:
 
 {{ write_action_url }}
 

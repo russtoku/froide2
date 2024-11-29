@@ -169,7 +169,7 @@ def get_message_sender_form(*args, **kwargs):
 
 class MessagePublicBodySenderForm(forms.Form):
     sender = forms.ModelChoiceField(
-        label=_("Sending Public Body"),
+        label=_("Sending Public Agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -197,7 +197,7 @@ def get_message_recipient_form(*args, **kwargs):
 
 class MessagePublicBodyRecipientForm(forms.Form):
     recipient = forms.ModelChoiceField(
-        label=_("Recipient Public Body"),
+        label=_("Recipient Public Agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -263,7 +263,7 @@ class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
         label=_("Send physical address"),
         widget=BootstrapCheckboxInput,
         help_text=_(
-            "If the public body is asking for your post "
+            "If the public agency is asking for your post "
             "address, check this and we will append the "
             "address below."
         ),
@@ -574,7 +574,7 @@ class MessageEditMixin(forms.Form):
         # The problem we have when uploading postal messages is that they do not have a time, so we
         # need to invent one. 12am is a good assumption, however if we already have messages on this
         # date, we need to add it *after* all those messages
-        # Example: User sends a foi request on 2011-01-01 at 3pm, the public body is fast and sends
+        # Example: User sends a foi request on 2011-01-01 at 3pm, the public agency is fast and sends
         # out the reply letter on the same day. If we would assume 12am as the letter time, we would
         # place the postal reply earlier than the users message
         possible_message_timestamps = [
@@ -623,7 +623,7 @@ class EditMessageForm(MessageEditMixin):
 class PostalBaseForm(MessageEditMixin, AttachmentSaverMixin, forms.Form):
     scan_help_text = _("Uploaded scans can be PDF, JPG, PNG or GIF.")
     publicbody = forms.ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -695,7 +695,7 @@ class PostalReplyForm(PostalBaseForm):
         "files",
         "not_publishable",
     ]
-    PUBLICBODY_LABEL = _("Sender public body")
+    PUBLICBODY_LABEL = _("Sender public agency")
 
     sender = forms.CharField(
         label=_("Sender name"),
@@ -743,7 +743,7 @@ def get_postal_message_form(*args, **kwargs):
 
 class PostalMessageForm(PostalBaseForm):
     FIELD_ORDER = ["publicbody", "recipient", "date", "subject", "text", "files"]
-    PUBLICBODY_LABEL = _("Receiving public body")
+    PUBLICBODY_LABEL = _("Receiving public agency")
 
     recipient = forms.CharField(
         label=_("Recipient Name"),

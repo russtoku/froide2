@@ -276,7 +276,7 @@ def get_requestpage_tour_data():
                 "popover": {
                     "title": _("Deadline"),
                     "description": _(
-                        """This is the deadline for your request. If the public body has not replied by then, we will let you know, so you can send a reminder. You can also adjust the date if necessary."""
+                        """This is the deadline for your request. If the public agency has not replied by then, we will let you know, so you can send a reminder. You can also adjust the date if necessary."""
                     ),
                 },
             },
@@ -377,7 +377,7 @@ def get_messagereceived_tour_data():
                 "popover": {
                     "title": _("Reply"),
                     "description": _(
-                        """At the bottom of the page you can send replies to the public body or start a mediation process with the mediation authority."""
+                        """At the bottom of the page you can send replies to the public agency or start a mediation process with the mediation authority."""
                     ),
                     "position": "top-center",
                 },

@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             model_name="publicbodysuggestion",
             name="public_body",
             field=models.ForeignKey(
-                verbose_name="Public Body",
+                verbose_name="Public Agency",
                 to="publicbody.PublicBody",
                 on_delete=django.db.models.deletion.CASCADE,
             ),
@@ -72,7 +72,7 @@ class Migration(migrations.Migration):
             name="public_body",
             field=models.ForeignKey(
                 on_delete=django.db.models.deletion.SET_NULL,
-                verbose_name="Public Body",
+                verbose_name="Public Agency",
                 blank=True,
                 to="publicbody.PublicBody",
                 null=True,
@@ -126,7 +126,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 related_name="received_messages",
                 on_delete=django.db.models.deletion.SET_NULL,
-                verbose_name="Public Body Recipient",
+                verbose_name="Public Agency Recipient",
                 blank=True,
                 to="publicbody.PublicBody",
                 null=True,
@@ -147,7 +147,7 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(
                 related_name="send_messages",
                 on_delete=django.db.models.deletion.SET_NULL,
-                verbose_name="From Public Body",
+                verbose_name="From Public Agency",
                 blank=True,
                 to="publicbody.PublicBody",
                 null=True,
@@ -169,7 +169,7 @@ class Migration(migrations.Migration):
             name="public_body",
             field=models.ForeignKey(
                 on_delete=django.db.models.deletion.SET_NULL,
-                verbose_name="Public Body",
+                verbose_name="Public Agency",
                 blank=True,
                 to="publicbody.PublicBody",
                 null=True,

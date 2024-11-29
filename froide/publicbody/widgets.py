@@ -18,7 +18,7 @@ def get_widget_context():
             "helpAbout": get_content_url("about"),
         },
         "i18n": {
-            "missingPublicBody": _("Are we missing a public body?"),
+            "missingPublicBody": _("Are we missing a public agency?"),
             "publicBodySearchPlaceholder": _("Ministry of..."),
             "search": _("Search"),
             "searchPublicBodyLabel": _("Search for public authorities"),
@@ -26,7 +26,7 @@ def get_widget_context():
             "environment": _("Environment"),
             "ministryOfLabour": _("Ministry of Labour"),
             "or": _("or"),
-            "noPublicBodiesFound": _("No Public Bodies found for this query."),
+            "noPublicBodiesFound": _("No Public Agencies found for this query."),
             "letUsKnow": _("Please let us know!"),
         },
     }

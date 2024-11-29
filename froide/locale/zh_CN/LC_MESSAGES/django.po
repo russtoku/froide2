@@ -113,7 +113,7 @@ msgstr "邮寄地址"
 #: froide/account/forms.py:34
 msgid ""
 "Optional. Your address will not be displayed publicly and is only needed in "
-"case a public body needs to send you paper."
+"case a public agency needs to send you paper."
 msgstr "可选。您的地址不会公开并且仅用于公共机构向您寄送材料。"
 
 #: froide/account/forms.py:38 froide/account/forms.py:169
@@ -149,7 +149,7 @@ msgstr "在网站上不显示我的姓名"
 
 #: froide/account/forms.py:61
 msgid ""
-"If you check this, your name will still appear in requests to public bodies, "
+"If you check this, your name will still appear in requests to public agencies, "
 "but we will do our best to not display it publicly. However, we cannot "
 "guarantee your anonymity"
 msgstr ""
@@ -1071,7 +1071,7 @@ msgid "requester"
 msgstr "请求者"
 
 #: froide/foirequest/forms.py:31
-msgid "Search for a topic or a public body:"
+msgid "Search for a topic or a public agency:"
 msgstr "搜索主题或公共机构："
 
 #: froide/foirequest/forms.py:38
@@ -1101,11 +1101,11 @@ msgid "Information Law"
 msgstr "信息法"
 
 #: froide/foirequest/forms.py:87
-msgid "You are not allowed to create a new public body"
+msgid "You are not allowed to create a new public agency"
 msgstr "您不能创建新的公共机构"
 
 #: froide/foirequest/forms.py:91
-msgid "You must specify a public body"
+msgid "You must specify a public agency"
 msgstr "您必须指定一个公共机构"
 
 #: froide/foirequest/forms.py:97 froide/foirequest/forms.py:101
@@ -1118,7 +1118,7 @@ msgid "Invalid Information Law"
 msgstr "无效信息法"
 
 #: froide/foirequest/forms.py:157
-msgid "Sending Public Body"
+msgid "Sending Public Agency"
 msgstr "发送到公共机构中"
 
 #: froide/foirequest/forms.py:181
@@ -1142,18 +1142,18 @@ msgstr "发送物理地址"
 
 #: froide/foirequest/forms.py:203
 msgid ""
-"If the public body is asking for your post address, check this and we will "
+"If the public agency is asking for your post address, check this and we will "
 "append it to your message."
 msgstr "如果公共机构询问您的通讯地址，请参阅此，我们将内容附在信息之后。"
 
 #: froide/foirequest/forms.py:232 froide/foirequest/forms.py:463
 #, fuzzy
-#| msgid "Public Body"
-msgid "Public body"
+#| msgid "Public Agency"
+msgid "Public agency"
 msgstr "公共机构"
 
 #: froide/foirequest/forms.py:236
-msgid "Please specify a reason why this is the right Public Body:"
+msgid "Please specify a reason why this is the right Public Agency:"
 msgstr "请阐述这是合适的公共机构的原因："
 
 #: froide/foirequest/forms.py:237
@@ -1188,7 +1188,7 @@ msgstr "没有给出其他原因"
 
 #: froide/foirequest/forms.py:307
 msgid ""
-"When you are (partially) denied access to information, the Public Body "
+"When you are (partially) denied access to information, the Public Agency "
 "should always state the reason."
 msgstr "当您被拒绝获得（部分）信息，公共机构应该指明原因。"
 
@@ -1218,8 +1218,8 @@ msgstr "重新定位到"
 
 #: froide/foirequest/forms.py:327
 msgid ""
-"If your message is redirected to a different Public Body, please specify the "
-"new Public Body"
+"If your message is redirected to a different Public Agency, please specify the "
+"new Public Agency"
 msgstr "如果您的信息被重新定位到不同的公共机构，请指定新的公共机构"
 
 #: froide/foirequest/forms.py:331
@@ -1227,11 +1227,11 @@ msgid "Costs"
 msgstr "花费"
 
 #: froide/foirequest/forms.py:335
-msgid "Please specify what the Public Body charges for the information."
+msgid "Please specify what the Public Agency charges for the information."
 msgstr "请指明公共机构为信息收取的费用。"
 
 #: froide/foirequest/forms.py:349
-msgid "Provide the redirected public body!"
+msgid "Provide the redirected public agency!"
 msgstr "提供重新定向的公共机构！"
 
 #: froide/foirequest/forms.py:356
@@ -1294,8 +1294,8 @@ msgstr "您需要提供信件文档内容或者扫描的文件。"
 
 #: froide/foirequest/forms.py:560
 #, fuzzy
-#| msgid "Sending Public Body"
-msgid "Sender public body"
+#| msgid "Sending Public Agency"
+msgid "Sender public agency"
 msgstr "发送到公共机构中"
 
 #: froide/foirequest/forms.py:562
@@ -1322,8 +1322,8 @@ msgstr ""
 
 #: froide/foirequest/forms.py:581
 #, fuzzy
-#| msgid "Sending Public Body"
-msgid "Receiving public body"
+#| msgid "Sending Public Agency"
+msgid "Receiving public agency"
 msgstr "发送到公共机构中"
 
 #: froide/foirequest/forms.py:583 froide/foirequest/forms.py:585
@@ -1362,20 +1362,20 @@ msgid "The requester's email address is yet to be confirmed."
 msgstr "请求者的邮件地址尚未得到确认。"
 
 #: froide/foirequest/models.py:154
-msgid "Public Body needed"
+msgid "Public Agency needed"
 msgstr "需要公共机构"
 
 #: froide/foirequest/models.py:155
-msgid "This request still needs a Public Body."
+msgid "This request still needs a Public Agency."
 msgstr "该请求需要一个公共机构。"
 
 #: froide/foirequest/models.py:159
-msgid "Awaiting Public Body confirmation"
+msgid "Awaiting Public Agency confirmation"
 msgstr "等待公共机构确认"
 
 #: froide/foirequest/models.py:160
 msgid ""
-"The Public Body of this request has been created by the user and still needs "
+"The Public Agency of this request has been created by the user and still needs "
 "to be confirmed."
 msgstr "用户已创建该请求的公共机构，但仍然需要确认。"
 
@@ -1384,7 +1384,7 @@ msgid "Awaiting response"
 msgstr "等待回复"
 
 #: froide/foirequest/models.py:165
-msgid "This request is still waiting for a response from the Public Body."
+msgid "This request is still waiting for a response from the Public Agency."
 msgstr "该请求仍在等待公共机构的回复。"
 
 #: froide/foirequest/models.py:169
@@ -1436,7 +1436,7 @@ msgid "Information not held"
 msgstr "没有掌握信息"
 
 #: froide/foirequest/models.py:197
-msgid "The Public Body stated that it does not possess the information."
+msgid "The Public Agency stated that it does not possess the information."
 msgstr "公共机构声明他们不具备该信息。"
 
 #: froide/foirequest/models.py:201
@@ -1444,7 +1444,7 @@ msgid "Request refused"
 msgstr "被拒绝的请求"
 
 #: froide/foirequest/models.py:202
-msgid "The Public Body refuses to provide the information."
+msgid "The Public Agency refuses to provide the information."
 msgstr "公共机构拒绝提供信息。"
 
 #: froide/foirequest/models.py:206
@@ -1553,7 +1553,7 @@ msgstr "总结"
 #: froide/foirequest/models.py:1559
 #: froide/foirequest/templates/foirequest/snippets/message.html:39
 #: froide/publicbody/models.py:305
-msgid "Public Body"
+msgid "Public Agency"
 msgstr "公共机构"
 
 #: froide/foirequest/models.py:283
@@ -1727,15 +1727,15 @@ msgid "Timestamp of Suggestion"
 msgstr "建议的时间标示"
 
 #: froide/foirequest/models.py:1127
-msgid "Reason this Public Body fits the request"
+msgid "Reason this Public Agency fits the request"
 msgstr "该公共机构符合请求的原因"
 
 #: froide/foirequest/models.py:1133
-msgid "Public Body Suggestion"
+msgid "Public Agency Suggestion"
 msgstr "公共机构建议"
 
 #: froide/foirequest/models.py:1134
-msgid "Public Body Suggestions"
+msgid "Public Agency Suggestions"
 msgstr "公共机构建议"
 
 #: froide/foirequest/models.py:1147
@@ -1771,7 +1771,7 @@ msgid "From Name"
 msgstr "来自姓名"
 
 #: froide/foirequest/models.py:1169
-msgid "From Public Body"
+msgid "From Public Agency"
 msgstr "来自公共机构"
 
 #: froide/foirequest/models.py:1171
@@ -1783,7 +1783,7 @@ msgid "Recipient Email"
 msgstr "收件人邮箱地址"
 
 #: froide/foirequest/models.py:1177
-msgid "Public Body Recipient"
+msgid "Public Agency Recipient"
 msgstr "公共机构收件人"
 
 #: froide/foirequest/models.py:1181 froide/foirequest/models.py:1562
@@ -2050,7 +2050,7 @@ msgstr "%(site_name)s：您的请求的最新回复"
 
 #: froide/foirequest/signals.py:95
 #, python-format
-msgid "%(site_name)s: New suggestion for a Public Body"
+msgid "%(site_name)s: New suggestion for a Public Agency"
 msgstr "%(site_name)s：向公共机构的新建议"
 
 #: froide/foirequest/signals.py:132
@@ -2143,7 +2143,7 @@ msgid ""
 "\n"
 "Your request \"%(title)s\" was not answered in the required time and became "
 "overdue.\n"
-"We recommend that you send another message to the public body to check the "
+"We recommend that you send another message to the public agency to check the "
 "status of the request and if they received it.\n"
 "\n"
 "If you received a postal answer, please add it to the request.\n"
@@ -2389,7 +2389,7 @@ msgstr ""
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"you received a suggestion for a Public Body on your request '%(title)s'."
+"you received a suggestion for a Public Agency on your request '%(title)s'."
 msgstr ""
 "%(name)s您好，\n"
 "\n"
@@ -2405,7 +2405,7 @@ msgstr "给出以下原因："
 
 #: froide/foirequest/templates/foirequest/emails/public_body_suggestion_received.txt:9
 msgid ""
-"If you want to use this Public Body, go to your request and chose the Public "
+"If you want to use this Public Agency, go to your request and chose the Public "
 "Body from the list. Here is a link to your request:"
 msgstr ""
 "如果您想使用该公共机构，请到您的请求中从列表中选择公共机构。这是您请求的链"
@@ -2489,7 +2489,7 @@ msgstr "\"%(name)s\"主题中的请求"
 
 #: froide/foirequest/templates/foirequest/list.html:37
 #, python-format
-msgid "Filtered by requests to Public Bodies in %(name)s."
+msgid "Filtered by requests to Public Agencies in %(name)s."
 msgstr ""
 
 #: froide/foirequest/templates/foirequest/list.html:60
@@ -2709,7 +2709,7 @@ msgstr "PDF载入中......"
 
 #: froide/foirequest/templates/foirequest/request.html:17
 #: froide/foirequest/templates/foirequest/request.html:174
-msgid "Visit the website of this Public Body"
+msgid "Visit the website of this Public Agency"
 msgstr "浏览该公共机构的网站"
 
 #: froide/foirequest/templates/foirequest/request.html:19
@@ -2725,13 +2725,13 @@ msgid "Search the internet for information about:"
 msgstr "在互联网搜索关于...的信息："
 
 #: froide/foirequest/templates/foirequest/request.html:22
-msgid "Search Public Body Website"
+msgid "Search Public Agency Website"
 msgstr "搜索公共机构网站"
 
 #: froide/foirequest/templates/foirequest/request.html:24
 msgid ""
 "We found an email address in your text: {{ email }}. Do not sent personal "
-"data to the Public Body."
+"data to the Public Agency."
 msgstr ""
 "我们在您的文本中发现邮箱地址：{{ email }}。请不要将个人信息发送到公共机构。"
 
@@ -2760,7 +2760,7 @@ msgid "Write a request"
 msgstr "写一个请求"
 
 #: froide/foirequest/templates/foirequest/request.html:54
-msgid "Choose a Public Body"
+msgid "Choose a Public Agency"
 msgstr "选择一个公共机构"
 
 #: froide/foirequest/templates/foirequest/request.html:62
@@ -2768,17 +2768,17 @@ msgid "To:"
 msgstr "致："
 
 #: froide/foirequest/templates/foirequest/request.html:73
-msgid "Notes for this public body"
+msgid "Notes for this public agency"
 msgstr "该公共机构的注释"
 
 #: froide/foirequest/templates/foirequest/request.html:94
 msgid ""
-"Don't select a public body for now. Let others help to find the right Public "
+"Don't select a public agency for now. Let others help to find the right Public "
 "Body later."
 msgstr "现在请不要选择公共机构。请其他人稍后帮助您选择合适的公共机构。"
 
 #: froide/foirequest/templates/foirequest/request.html:102
-msgid "Create a new public body on the fly."
+msgid "Create a new public agency on the fly."
 msgstr "及时创建一个新的公共机构。"
 
 #: froide/foirequest/templates/foirequest/request.html:110
@@ -2834,13 +2834,13 @@ msgstr "涉及你个人的一个请求"
 msgid ""
 "If you want to ask a question that relates to you personally, like how you "
 "can achieve something or who you have to contact, you need publicly "
-"available information from that public body:"
+"available information from that public agency:"
 msgstr ""
 "如果您想询问关于您个人的问题，例如如何获得材料或者您可以和谁联系，您需要那个"
 "公共机构的公开可获得信息："
 
 #: froide/foirequest/templates/foirequest/request.html:174
-msgid "Click here to go to 115.de - the Public Body Service Hotline"
+msgid "Click here to go to 115.de - the Public Agency Service Hotline"
 msgstr "点击此处到115.de-公共机构服务热线"
 
 #: froide/foirequest/templates/foirequest/request.html:179
@@ -2855,7 +2855,7 @@ msgstr "关于一个观点的请求"
 #: froide/foirequest/templates/foirequest/request.html:193
 msgid ""
 "In order to ask about a political state, you need to talk to people not "
-"public bodies. Please ask your Member of Parliament about the topic you are "
+"public agencies. Please ask your Member of Parliament about the topic you are "
 "interested in:"
 msgstr ""
 "要询问政治状况，您需要和人交谈而不是公共机构。请向国会议员咨询您感兴趣的话"
@@ -2958,7 +2958,7 @@ msgid "Search this site for %(topic)s"
 msgstr "在该网站搜索%(topic)s"
 
 #: froide/foirequest/templates/foirequest/request.html:428
-msgid "Explore other requests made to this Public Body"
+msgid "Explore other requests made to this Public Agency"
 msgstr "搜索向该公共机构提出的其他请求"
 
 #: froide/foirequest/templates/foirequest/request.html:435
@@ -3043,7 +3043,7 @@ msgstr ""
 #: froide/foirequest/templates/foirequest/show.html:56
 msgid ""
 "Have you not gotten any reply? &rarr; <a data-tabgo=\"tab\" href=\"#write-"
-"message\">Write a reminder to the public body!</a>"
+"message\">Write a reminder to the public agency!</a>"
 msgstr ""
 "您是否未收到回复? &rarr; <a data-tabgo=\"tab\" href=\"#write-message\">请向公"
 "共机构写一个提醒信息！</a>"
@@ -3059,7 +3059,7 @@ msgstr "考虑给中介人发一封信件"
 #: froide/foirequest/templates/foirequest/show.html:71
 msgid ""
 "This request is not an FoI request. This site is only for requesting "
-"specific information from public bodies."
+"specific information from public agencies."
 msgstr "这个请求不是FOI请求。这个网站仅用于向公共机构请求具体信息。"
 
 #: froide/foirequest/templates/foirequest/show.html:88
@@ -3080,7 +3080,7 @@ msgid "Set status"
 msgstr "设置状态"
 
 #: froide/foirequest/templates/foirequest/show.html:116
-msgid "Choose Public Body"
+msgid "Choose Public Agency"
 msgstr "选择公共机构"
 
 #: froide/foirequest/templates/foirequest/show.html:123
@@ -3124,12 +3124,12 @@ msgstr "设置一个新的状态"
 
 #: froide/foirequest/templates/foirequest/show.html:201
 msgid ""
-"As the author of this request, please choose a public body from one of the "
+"As the author of this request, please choose a public agency from one of the "
 "suggestions:"
 msgstr "作为该请求的作者，请从建议中选择一个公共机构："
 
 #: froide/foirequest/templates/foirequest/show.html:205
-msgid "Send this request to the selected Public Body"
+msgid "Send this request to the selected Public Agency"
 msgstr "将该请求发送给所选的公共机构"
 
 #: froide/foirequest/templates/foirequest/show.html:217
@@ -3200,7 +3200,7 @@ msgid "You can attach more documents to your letter later."
 msgstr "稍后您可以向该回复添加更多文件。"
 
 #: froide/foirequest/templates/foirequest/show.html:302
-msgid "Send message to public body"
+msgid "Send message to public agency"
 msgstr "向公共机构发送信息"
 
 #: froide/foirequest/templates/foirequest/show.html:304
@@ -3210,7 +3210,7 @@ msgid ""
 msgstr "您的请求<b>已过期</b>。您需要向公共机构发送一条提醒信息！"
 
 #: froide/foirequest/templates/foirequest/show.html:306
-msgid "You can send another message to this Public Body if you want to."
+msgid "You can send another message to this Public Agency if you want to."
 msgstr "如果您有意愿，可以向公共机构发送另一条信息。"
 
 #: froide/foirequest/templates/foirequest/show.html:320
@@ -3265,11 +3265,11 @@ msgid "Save Summary"
 msgstr "保存总结"
 
 #: froide/foirequest/templates/foirequest/show.html:377
-msgid "You can suggest a public body for this request."
+msgid "You can suggest a public agency for this request."
 msgstr "您可以为该请求建议一个公共机构。"
 
 #: froide/foirequest/templates/foirequest/show.html:380
-msgid "The following public bodies have already been suggested:"
+msgid "The following public agencies have already been suggested:"
 msgstr "以下是经建议的公共机构："
 
 #: froide/foirequest/templates/foirequest/show.html:386
@@ -3285,7 +3285,7 @@ msgid "There are no suggestions yet"
 msgstr "还没有建议"
 
 #: froide/foirequest/templates/foirequest/show.html:403
-msgid "Suggest this Public Body"
+msgid "Suggest this Public Agency"
 msgstr "向该公共机构提出建议"
 
 #: froide/foirequest/templates/foirequest/show.html:411
@@ -3347,7 +3347,7 @@ msgstr "解决方案的总结"
 
 #: froide/foirequest/templates/foirequest/show.html:482
 msgid ""
-"This request was not sent yet, because it still needs a Public Body as a "
+"This request was not sent yet, because it still needs a Public Agency as a "
 "recipient."
 msgstr "该请求还未发送，因为它还需要一个公共机构作为接收人。"
 
@@ -3359,7 +3359,7 @@ msgstr "该请求是非公开的，并且不会从用户接收公共机构的建
 
 #: froide/foirequest/templates/foirequest/show.html:494
 msgid ""
-"The public body of this request has been created by the user and still needs "
+"The public agency of this request has been created by the user and still needs "
 "to be confirmed."
 msgstr "用户已创建该请求的公共机构，并且需要确认。"
 
@@ -3541,11 +3541,11 @@ msgid "change"
 msgstr "改变"
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:19
-msgid "Set the Public Body that sent this message:"
+msgid "Set the Public Agency that sent this message:"
 msgstr "设置发送此消息的公共机构："
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:21
-msgid "Set Sending Public Body"
+msgid "Set Sending Public Agency"
 msgstr "设置发送的公共机构"
 
 #: froide/foirequest/templates/foirequest/snippets/message.html:53
@@ -3631,7 +3631,7 @@ msgid "latest"
 msgstr "最新的"
 
 #. Translators: part in request filter URL
-#. Translators: part in Public Body URL
+#. Translators: part in Public Agency URL
 #: froide/foirequest/urls.py:37 froide/foirequest/urls.py:39
 #: froide/foirequest/urls.py:41 froide/publicbody/urls.py:13
 #: froide/publicbody/urls.py:18
@@ -3676,12 +3676,12 @@ msgid ""
 msgstr "您提交的表格中有错误。请检查并再次发送。"
 
 #: froide/foirequest/views.py:465
-msgid "Others can now suggest the Public Bodies for your request."
+msgid "Others can now suggest the Public Agencies for your request."
 msgstr "现在其他人可以为您的请求建议公共机构。"
 
 #: froide/foirequest/views.py:468
 msgid ""
-"Your request will be sent as soon as the newly created Public Body was "
+"Your request will be sent as soon as the newly created Public Agency was "
 "confirmed by an administrator."
 msgstr "新创建的公共机构被管理员确认后，您的请求将被尽快发送。"
 
@@ -3702,7 +3702,7 @@ msgid "Missing or invalid input!"
 msgstr "缺失或者无效的输入！"
 
 #: froide/foirequest/views.py:502
-msgid "This request doesn't need a Public Body!"
+msgid "This request doesn't need a Public Agency!"
 msgstr "该请求不需要公共机构！"
 
 #: froide/foirequest/views.py:514
@@ -3711,15 +3711,15 @@ msgid "Request was sent to: %(name)s."
 msgstr "请求已被发送到：%(name)s。"
 
 #: froide/foirequest/views.py:535
-msgid "Your Public Body suggestion has been added."
+msgid "Your Public Agency suggestion has been added."
 msgstr "您的公共机构建议已被添加。"
 
 #: froide/foirequest/views.py:538
-msgid "This Public Body has already been suggested."
+msgid "This Public Agency has already been suggested."
 msgstr "该公共机构已经被建议。"
 
 #: froide/foirequest/views.py:541
-msgid "You need to specify a Public Body!"
+msgid "You need to specify a Public Agency!"
 msgstr "您需要指定一个公共机构！"
 
 #: froide/foirequest/views.py:554
@@ -4164,7 +4164,7 @@ msgid "Enter comma-separated tags here"
 msgstr "在此加入逗号分隔标签"
 
 #: froide/publicbody/forms.py:7
-msgid "Name of Public Body"
+msgid "Name of Public Agency"
 msgstr "公共机构的名称"
 
 #: froide/publicbody/forms.py:8
@@ -4176,7 +4176,7 @@ msgid "Email Address for Freedom of Information Requests"
 msgstr "信息自由请求的邮箱地址"
 
 #: froide/publicbody/forms.py:12
-msgid "Homepage URL of Public Body"
+msgid "Homepage URL of Public Agency"
 msgstr "公共机构主页的网址"
 
 #. Translators: URL part
@@ -4284,19 +4284,19 @@ msgid "rank"
 msgstr "等级"
 
 #: froide/publicbody/models.py:208
-msgid "Public Body Tag"
+msgid "Public Agency Tag"
 msgstr "公共机构标签"
 
 #: froide/publicbody/models.py:209
-msgid "Public Body Tags"
+msgid "Public Agency Tags"
 msgstr "公共机构标签"
 
 #: froide/publicbody/models.py:218
-msgid "Tagged Public Body"
+msgid "Tagged Public Agency"
 msgstr "已标签的公共机构"
 
 #: froide/publicbody/models.py:219
-msgid "Tagged Public Bodies"
+msgid "Tagged Public Agencies"
 msgstr "已标签的公共机构"
 
 #: froide/publicbody/models.py:250
@@ -4363,17 +4363,17 @@ msgstr "请求的数量"
 #: froide/publicbody/templates/publicbody/base.html:5
 #: froide/publicbody/templates/publicbody/list.html:10
 #: froide/templates/base.html:36
-msgid "Public Bodies"
+msgid "Public Agencies"
 msgstr "公共机构"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html:6
 #, fuzzy
-#| msgid "Reason this Public Body fits the request"
-msgid "This public body's requests"
+#| msgid "Reason this Public Agency fits the request"
+msgid "This public agency's requests"
 msgstr "该公共机构符合请求的原因"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html:12
-msgid "Confirm this Public Body "
+msgid "Confirm this Public Agency "
 msgstr "确认该公共机构"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_list.html:9
@@ -4405,13 +4405,13 @@ msgid "Ministry of Labour"
 msgstr "劳动部"
 
 #: froide/publicbody/templates/publicbody/_chooser.html:59
-msgid "No Public Bodies found for this query."
+msgid "No Public Agencies found for this query."
 msgstr "未找到与该搜索相关的公共机构。"
 
 #: froide/publicbody/templates/publicbody/_chooser.html:64
 #, python-format
 msgid ""
-"Are we missing a public body? <a href=\"%(url)s\">Please let us know!</a>"
+"Are we missing a public agency? <a href=\"%(url)s\">Please let us know!</a>"
 msgstr "公共机构名单不齐全？<a href=\"%(url)s\">请让我们了解该情况！</a>"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:17
@@ -4420,11 +4420,11 @@ msgid "Freedom of Information<br/>in %(name)s"
 msgstr "%(name)s中的<br/>信息自由"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:21
-msgid "Ask Public Bodies for administrative information — it's your right."
+msgid "Ask Public Agencies for administrative information — it's your right."
 msgstr "向公共机构询问管理信息---这是您的权利。"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:32
-msgid "Which Public Bodies?"
+msgid "Which Public Agencies?"
 msgstr "哪些公共机构？"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:36
@@ -4434,7 +4434,7 @@ msgstr "所有在此地区进行行政管理工作的机构。"
 #: froide/publicbody/templates/publicbody/jurisdiction.html:39
 #, python-format
 msgid ""
-"Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Bodies.</a>"
+"Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Agencies.</a>"
 msgstr "向其中一个<a href=\"%(url)s\">%(pb_count)s 公共机构</a>发出请求。"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:48
@@ -4495,11 +4495,11 @@ msgid "Search Terms"
 msgstr "搜索字词"
 
 #: froide/publicbody/templates/publicbody/list.html:25
-msgid "Search Public Bodies"
+msgid "Search Public Agencies"
 msgstr "搜索公共机构"
 
 #: froide/publicbody/templates/publicbody/list.html:59
-msgid "Show all public bodies"
+msgid "Show all public agencies"
 msgstr "搜索所有公共机构"
 
 #: froide/publicbody/templates/publicbody/list.html:80
@@ -4512,7 +4512,7 @@ msgid "%(name)s is a %(classification)s in %(juris)s on %(site_name)s"
 msgstr ""
 
 #: froide/publicbody/templates/publicbody/show.html:18
-msgid "Make a Request to this public body!"
+msgid "Make a Request to this public agency!"
 msgstr "向该公共机构提出请求！"
 
 #: froide/publicbody/templates/publicbody/show.html:28
@@ -4557,16 +4557,16 @@ msgstr "结果总结"
 
 #: froide/publicbody/templates/publicbody/show.html:107
 #, python-format
-msgid "One requests to this public body"
-msgid_plural "%(count)s requests to this public body"
+msgid "One requests to this public agency"
+msgid_plural "%(count)s requests to this public agency"
 msgstr[0] "该公共机构的%(count)s请求"
 
 #: froide/publicbody/templates/publicbody/show.html:130
-msgid "See all FOI requests for this public body"
+msgid "See all FOI requests for this public agency"
 msgstr "查看该公共机构的所有FOI请求"
 
 #: froide/publicbody/templates/publicbody/show.html:135
-msgid "There are no requests for this public body yet"
+msgid "There are no requests for this public agency yet"
 msgstr "该公共机构还没有请求"
 
 #: froide/publicbody/templates/publicbody/show_foilaw.html:9
@@ -4615,7 +4615,7 @@ msgid "You need to provide a url."
 msgstr "您需要提供一个网址。"
 
 #: froide/publicbody/views.py:135
-msgid "Public Bodies were imported."
+msgid "Public Agencies were imported."
 msgstr "公共机构已导入。"
 
 #: froide/settings.py:211
@@ -4702,7 +4702,7 @@ msgstr "为所有项目添加标签"
 
 #: froide/templates/base.html:10
 msgid ""
-"This site is currently in dry run mode. All Public Body mail will go to this "
+"This site is currently in dry run mode. All Public Agency mail will go to this "
 "mail server:"
 msgstr "该网站目前处于试运行模式。所有公共机构的邮件会传送到这个邮件服务器："
 
@@ -4801,7 +4801,7 @@ msgstr "该网站发布信息自由的请求，以帮助您提出自己所需的
 
 #: froide/templates/index.html:24
 #, python-format
-msgid "Search %(foicount)s requests and %(pbcount)s public bodies:"
+msgid "Search %(foicount)s requests and %(pbcount)s public agencies:"
 msgstr "搜索 %(foicount)s 请求和%(pbcount)s公共机构："
 
 #: froide/templates/index.html:32 froide/templates/search/search.html:17
@@ -4857,7 +4857,7 @@ msgstr "什么是信息自由？"
 #: froide/templates/index.html:104
 msgid ""
 "Every citizen has the right under the Freedom of Information Laws to ask for "
-"and receive access to information from Public Bodies concerning public "
+"and receive access to information from Public Agencies concerning public "
 "affairs."
 msgstr ""
 "按信息自由法规定，每个公民都有权利申请并获得关于公共事务的公共机构的信息。"
@@ -4908,7 +4908,7 @@ msgstr "后一"
 #. Translators: meta keywords
 #: froide/templates/scaffold.html:20
 msgid ""
-"Freedom of Information Requests, Freedom of Information Law, Public Body "
+"Freedom of Information Requests, Freedom of Information Law, Public Agency "
 "Information"
 msgstr "信息自由请求，信息自由法，公共机构信息"
 
@@ -4916,7 +4916,7 @@ msgstr "信息自由请求，信息自由法，公共机构信息"
 #: froide/templates/scaffold.html:22
 #, python-format
 msgid ""
-"%(site)s helps you to make freedom of information requests to public bodies"
+"%(site)s helps you to make freedom of information requests to public agencies"
 msgstr "%(site)s帮助您向公共机构提出信息自由的请求"
 
 #: froide/templates/search/search.html:7
@@ -4942,16 +4942,16 @@ msgid "You can browse the list of existing requests."
 msgstr "您可以浏览现有请求列表"
 
 #: froide/templates/search/search.html:43
-msgid "Related Public Bodies"
+msgid "Related Public Agencies"
 msgstr "相关的公共机构"
 
 #: froide/templates/search/search.html:51
 #, python-format
-msgid "No relevant Public bodies found for \"%(query)s\"."
+msgid "No relevant Public agencies found for \"%(query)s\"."
 msgstr "没有找到与\"%(query)s\"相关的公共机构。"
 
 #: froide/templates/search/search.html:52
-msgid "You can browse the list of Public Bodies."
+msgid "You can browse the list of Public Agencies."
 msgstr "您可以浏览公共机构列表。"
 
 #: froide/templates/search/search.html:60
@@ -5199,27 +5199,27 @@ msgstr "privacy"
 #~ msgid "Topic"
 #~ msgstr "Topic"
 
-#~ msgid "Public Bodies by Topic"
-#~ msgstr "Public Bodies by Topic"
+#~ msgid "Public Agencies by Topic"
+#~ msgstr "Public Agencies by Topic"
 
 #~ msgid "in alphabetical order"
 #~ msgstr "in alphabetical order"
 
-#~ msgid "No Public Bodies yet"
-#~ msgstr "No Public Bodies yet"
+#~ msgid "No Public Agencies yet"
+#~ msgstr "No Public Agencies yet"
 
-#~ msgid "Click here to make a request to this Public Body"
-#~ msgstr "Click here to make a request to this Public Body"
+#~ msgid "Click here to make a request to this Public Agency"
+#~ msgstr "Click here to make a request to this Public Agency"
 
-#~ msgid "Search Results for &quot;%(query)s&quot; in Public Bodies"
-#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Bodies"
+#~ msgid "Search Results for &quot;%(query)s&quot; in Public Agencies"
+#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Agencies"
 
 #~ msgid ""
 #~ "\n"
-#~ "%(counter)s Public Body in Topic '%(name)s'"
+#~ "%(counter)s Public Agency in Topic '%(name)s'"
 #~ msgid_plural ""
 #~ "\n"
-#~ "%(counter)s Public Bodies in Topic '%(name)s'"
+#~ "%(counter)s Public Agencies in Topic '%(name)s'"
 #~ msgstr[0] "28129e804577ec6c2115ed2b83e1bf82_pl_0"
 
 #~ msgid "back to list of topics"

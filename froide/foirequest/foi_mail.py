@@ -267,11 +267,11 @@ def check_delivery_conditions(
         return None, None
 
     if publicbody:
-        # if email can be matched to public body, deliver to foirequest
+        # if email can be matched to public agency, deliver to foirequest
         return foirequest, publicbody
 
     if parsed_email.bounce_info.is_bounce:
-        # If public body cannot be found, but it's a bounce message, deliver
+        # If public agency cannot be found, but it's a bounce message, deliver
         return foirequest, None
 
     # No match and not bounce, raise DeferredMessageNeeded

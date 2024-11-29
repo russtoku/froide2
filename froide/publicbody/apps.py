@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 
 class PublicBodyConfig(AppConfig):
     name = "froide.publicbody"
-    verbose_name = _("Public Body")
+    verbose_name = _("Public Agency")
 
     def ready(self):
         from froide.account import account_merged
@@ -42,7 +42,7 @@ class PublicBodyConfig(AppConfig):
 def add_search(request):
     return {
         "name": "publicbody",
-        "title": _("Public Bodies"),
+        "title": _("Public Agencies"),
         "url": reverse("publicbody-list"),
     }
 

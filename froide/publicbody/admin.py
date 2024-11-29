@@ -53,7 +53,7 @@ has_foirequests = apps.is_installed("froide.foirequest")
 
 class PublicBodyAdminSite(admin.AdminSite):
     site_title = settings.SITE_NAME
-    site_header = _("Public Body Admin")
+    site_header = _("Public Agency Admin")
     site_url = None
 
 
@@ -244,7 +244,7 @@ class PublicBodyBaseAdminMixin:
         Classification, execute_assign_classification, _("Assign classification...")
     )
     replace_publicbody = make_choose_object_action(
-        PublicBody, execute_replace_publicbody, _("Replace public bodies with...")
+        PublicBody, execute_replace_publicbody, _("Replace public agencies with...")
     )
 
     def get_queryset(self, request):
@@ -298,7 +298,7 @@ class PublicBodyBaseAdminMixin:
         except Exception as e:
             self.message_user(request, str(e))
         else:
-            self.message_user(request, _("Public Bodies were imported."))
+            self.message_user(request, _("Public Agencies were imported."))
         return redirect("%s:publicbody_publicbody_changelist" % self.admin_site.name)
 
     def geo_match(self, request):
@@ -465,13 +465,13 @@ class ProposedPublicBodyAdminMixin(PublicBodyBaseAdminMixin):
         result = self._confirm_pb(pb, request.user)
 
         if result is None:
-            self.message_user(request, _("This public body is already confirmed."))
+            self.message_user(request, _("This public agency is already confirmed."))
         else:
             self.message_user(
                 request,
                 ngettext(
-                    "Public body confirmed. %(count)d message was sent.",
-                    "Public body confirmed. %(count)d messages were sent",
+                    "Public agency confirmed. %(count)d message was sent.",
+                    "Public agency confirmed. %(count)d messages were sent",
                     result,
                 )
                 % {"count": result},
@@ -487,9 +487,9 @@ class ProposedPublicBodyAdminMixin(PublicBodyBaseAdminMixin):
         creator = pb.created_by
         if result is not None and creator and creator != user:
             creator.send_mail(
-                _("Public body “%s” has been approved") % pb.name,
+                _("Public agency “%s” has been approved") % pb.name,
                 _(
-                    "Hello,\n\nYou can find the approved public body here:\n\n"
+                    "Hello,\n\nYou can find the approved public agency here:\n\n"
                     "{url}\n\nAll the Best,\n{site_name}"
                 ).format(
                     url=pb.get_absolute_domain_url(), site_name=settings.SITE_NAME
@@ -505,7 +505,7 @@ class ProposedPublicBodyAdminMixin(PublicBodyBaseAdminMixin):
             self._confirm_pb(pb, request.user)
 
         self.message_user(
-            request, _("{} public bodies were confirmed.").format(queryset.count())
+            request, _("{} public agencies were confirmed.").format(queryset.count())
         )
 
     def send_message(self, request, pk):
@@ -519,11 +519,11 @@ class ProposedPublicBodyAdminMixin(PublicBodyBaseAdminMixin):
         creator = pb.created_by
         if creator:
             creator.send_mail(
-                _("Concerning your public body proposal “%s”") % pb.name,
+                _("Concerning your public agency proposal “%s”") % pb.name,
                 request.POST.get("message"),
                 priority=False,
             )
-            self.message_user(request, _("E-Mail was sent to public body creator."))
+            self.message_user(request, _("E-Mail was sent to public agency creator."))
         return redirect(
             "%s:publicbody_proposedpublicbody_change" % self.admin_site.name, pb.id
         )
@@ -566,7 +566,7 @@ class FoiLawAdmin(TranslatableAdmin):
         return qs.annotate(num_publicbodies=Count("publicbody", distinct=True))
 
     @admin.display(
-        description=_("public bodies"),
+        description=_("public agencies"),
         ordering="num_publicbodies",
     )
     def num_publicbodies(self, obj):
@@ -641,7 +641,7 @@ class ClassificationAdmin(TreeAdmin):
         qs = super(ClassificationAdmin, self).get_queryset(request)
         return qs.annotate(num_publicbodies=Count("publicbody", distinct=True))
 
-    @admin.display(description=_("# public bodies"))
+    @admin.display(description=_("# public agencies"))
     def num_publicbodies(self, obj):
         """# of companies an expert has."""
 
@@ -652,7 +652,7 @@ class ClassificationAdmin(TreeAdmin):
             '<a href="{}">{}</a>',
             reverse("%s:publicbody_publicbody_changelist" % self.admin_site.name)
             + ("?classification__id__exact={}".format(obj.id)),
-            _("Public bodies with this classification"),
+            _("Public agencies with this classification"),
         )
 
 
@@ -684,7 +684,7 @@ class CategoryAdmin(TreeAdmin):
             num_publicbodies=Count("categorized_publicbodies", distinct=True)
         )
 
-    @admin.display(description=_("# public bodies"))
+    @admin.display(description=_("# public agencies"))
     def num_publicbodies(self, obj):
         """# of companies an expert has."""
 
@@ -695,7 +695,7 @@ class CategoryAdmin(TreeAdmin):
             '<a href="{}">{}</a>',
             reverse("%s:publicbody_publicbody_changelist" % self.admin_site.name)
             + ("?categories__id__exact={}".format(obj.id)),
-            _("Public bodies with this category"),
+            _("Public agencies with this category"),
         )
 
 

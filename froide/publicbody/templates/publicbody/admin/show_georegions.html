@@ -19,7 +19,7 @@
     {% leaflet_map "map" callback="main_map_init" creatediv=False %}
     <div id="map" class="leaflet-container"></div>
     {% if no_regions %}
-        <h2>{% trans "No geo region available for these public bodies" %}</h2>
+        <h2>{% trans "No geo region available for these public agencies" %}</h2>
         <ul>
             {% for obj in no_regions %}<li>{{ obj.name }}</li>{% endfor %}
         </ul>

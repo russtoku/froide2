@@ -134,7 +134,7 @@ def create_project_message(foirequest_id, user_id, **form_data):
     except User.DoesNotExist:
         return
 
-    # Send to public body's default email
+    # Send to public agency's default email
     form_data["to"] = foirequest.public_body.email
     form = SendMessageForm(foirequest=foirequest, data=form_data)
     if form.is_valid():

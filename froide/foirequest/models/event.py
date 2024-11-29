@@ -66,7 +66,7 @@ class EventName(models.TextChoices):
     SENDER_CHANGED = "sender_changed", _("sender of message was changed")
     RECIPIENT_CHANGED = "recipient_changed", _("recipient of message was changed")
 
-    PUBLIC_BODY_SUGGESTED = "public_body_suggested", _("a public body was suggested")
+    PUBLIC_BODY_SUGGESTED = "public_body_suggested", _("a public agency was suggested")
     REQUEST_REDIRECTED = "request_redirected", _("the request was redirected")
 
     DESCRIPTION_REDACTED = "description_redacted", _("the description was redacted")
@@ -172,7 +172,7 @@ class FoiEvent(models.Model):
         null=True,
         on_delete=models.SET_NULL,
         blank=True,
-        verbose_name=_("Public Body"),
+        verbose_name=_("Public Agency"),
     )
     public = models.BooleanField(_("Is Public?"), default=True)
     event_name = models.CharField(_("Event Name"), max_length=255)

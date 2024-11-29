@@ -148,7 +148,7 @@ def moderation_view(request):
             "kind": _("Kind"),
             "date": _("Date"),
             "problemReports": _("problem reports"),
-            "publicBodyChangeProposals": _("public bodies"),
+            "publicBodyChangeProposals": _("public agencies"),
             "message": _("Message"),
             "description": _("Description"),
             "action": pgettext("action to take in moderation table", "Action"),
@@ -168,7 +168,7 @@ def moderation_view(request):
                 "Please describe to admins what should be done."
             ),
             "activeModerators": _("Active moderators"),
-            "toPublicBody": _("to public body"),
+            "toPublicBody": _("to public agency"),
             "toMessage": _("to message"),
             "reviewNewPublicBody": _("review new"),
             "reviewChangedPublicBody": _("review changes"),

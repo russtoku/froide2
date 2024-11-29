@@ -98,7 +98,7 @@ class RequestProjectTest(TestCase):
     def test_draft_project(self):
         """
         A non-batch user can be assigned a batch draft
-        The user cannot change the public bodies, but is able to sent
+        The user cannot change the public agencies, but is able to sent
         the request.
         """
         user = User.objects.get(email="dummy@example.org")
@@ -183,7 +183,7 @@ def test_project_mass_mail(project_with_requests, faker):
     message = faker.text()
     mail.outbox = []
 
-    # Action: Send a message to all public bodies in the request
+    # Action: Send a message to all public agencies in the request
     create_project_messages(
         foirequest_ids=project_foireqs.values_list("id", flat=True),
         user_id=project_with_requests.user.id,
@@ -198,7 +198,7 @@ def test_project_mass_mail(project_with_requests, faker):
     for message in messages:
         assert message.is_bulk
 
-    # Expectation: Messages are send out to all public bodies in the request
+    # Expectation: Messages are send out to all public agencies in the request
     # Expectation: The user is not notified of the sent messages
     assert len(mail.outbox) == project_foireqs.count()
     out_mails = {msg.to[0] for msg in mail.outbox}

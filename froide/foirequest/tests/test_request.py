@@ -593,7 +593,7 @@ def test_logged_in_request_no_public_body(world, client, pb):
     assert [t.public_body for t in req.publicbodysuggestion_set.all()] == [pb]
     assert len(mail.outbox) == 1
 
-    # set public body
+    # set public agency
     response = client.post(
         reverse("foirequest-set_public_body", kwargs={"slug": req.slug + "garbage"}),
         {"suggestion": str(pb.pk)},
@@ -1569,7 +1569,7 @@ def test_full_text_request(world, client, pb):
     pb = PublicBody.objects.all()[0]
     law = pb.default_law
     post = {
-        "subject": "A Public Body Request",
+        "subject": "A Public Agency Request",
         "body": "This is another test body with Ümläut€n",
         "full_text": "true",
         "publicbody": str(pb.id),
@@ -2177,7 +2177,7 @@ def test_mail_confirmation_after_success(world, user, client, faker):
     assert req.title == foirequest_post["subject"]
     assert req.description == foirequest_post["body"]
 
-    # Test that we queue the email for the public body
+    # Test that we queue the email for the public agency
     assert len(mail.outbox) == 1
     message = mail.outbox[0]
     assert mail.outbox[0].to[0] == pb.email
@@ -2218,7 +2218,7 @@ def test_mail_confirmation_after_success(world, user, client, faker):
     )
     foimessage.send()
 
-    # Expectation: The message is send to the public body
+    # Expectation: The message is send to the public agency
     assert len(mail.outbox) == 3
     message = mail.outbox[2]
     assert message.to[0] == pb.email

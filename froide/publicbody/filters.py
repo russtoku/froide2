@@ -15,7 +15,7 @@ class PublicBodyFilterSet(BaseSearchFilterSet):
     q = django_filters.CharFilter(
         method="auto_query",
         widget=forms.TextInput(
-            attrs={"placeholder": _("Search public bodies"), "class": "form-control"}
+            attrs={"placeholder": _("Search public agencies"), "class": "form-control"}
         ),
     )
 

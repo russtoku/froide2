@@ -53,7 +53,7 @@ class DocumentSearchView(BaseSearchView):
             "getter": lambda x: str(x["object"].pk),
             "query_param": "publicbody",
             "label_getter": lambda x: x["object"].name,
-            "label": _("public bodies"),
+            "label": _("public agencies"),
         },
         "collections": {
             "queryset": DocumentCollection.objects.filter(public=True),
