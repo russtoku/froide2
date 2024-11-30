@@ -175,7 +175,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     private = models.BooleanField(_("Private"), default=False)
-    address = models.TextField(_("Address"), blank=True)
+    #address = models.TextField(_("Address"), blank=True)
     terms = models.BooleanField(_("Accepted Terms"), default=True)
 
     profile_text = models.TextField(blank=True)
