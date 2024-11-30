@@ -79,12 +79,6 @@
                     <dd>
                         {{ object.contact|urlizetrunc:35|linebreaksbr }}
                     </dd>
-                    <dt>{% blocktrans %}Mailing Address:{% endblocktrans %}</dt>
-                    <dd itemprop="address"
-                        itemscope
-                        itemtype="http://schema.org/PostalAddress">
-                        {{ object.address|linebreaksbr }}
-                    </dd>
                     {% if object.file_index %}
                         <dt>{% blocktrans %}File Index:{% endblocktrans %}</dt>
                         <dd>
