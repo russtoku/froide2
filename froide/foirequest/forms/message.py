@@ -13,7 +13,6 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import ngettext_lazy
 
-from froide.account.forms import AddressBaseForm
 from froide.account.services import AccountService
 from froide.foirequest.models.event import FoiEvent
 from froide.helper.fields import MultipleFileField
@@ -220,7 +219,7 @@ class MessagePublicBodyRecipientForm(forms.Form):
         self.message.save()
 
 
-class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
+class SendMessageForm(AttachmentSaverMixin, forms.Form):
     to = forms.ChoiceField(
         label=_("To"), choices=[], required=True, widget=BootstrapRadioSelect
     )

@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from mfa.models import MFAKey
 
 from ..auth import requires_recent_auth
-from ..forms import AddressForm, NewUserForm
+from ..forms import NewUserForm
 from ..menu import menu_registry
 from ..models import User
 

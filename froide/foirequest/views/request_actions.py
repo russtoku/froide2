@@ -11,7 +11,7 @@ from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 from django.views.generic import UpdateView
 
-from froide.account.forms import AddressForm, NewUserForm
+from froide.account.forms import NewUserForm
 from froide.foirequest.forms.project import AssignProjectForm
 from froide.foirequest.forms.request import RedactDescriptionForm
 from froide.helper.auth import can_manage_object

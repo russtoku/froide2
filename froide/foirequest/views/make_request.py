@@ -15,7 +15,7 @@ from django.utils.translation import pgettext
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import DetailView, FormView, TemplateView
 
-from froide.account.forms import AddressForm, NewUserForm
+from froide.account.forms import NewUserForm
 from froide.campaign.models import Campaign
 from froide.georegion.models import GeoRegion
 from froide.helper.auth import get_read_queryset

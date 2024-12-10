@@ -51,60 +51,7 @@ class UserChangeForm(DjangoUserChangeForm):
         fields = "__all__"
 
 
-ADDRESS_REQUIRED_HELP_TEXT = _(
-    "Your address will not be displayed "
-    "publicly and is only needed because a public agency "
-    "will likely want to send you paper."
-)
-
-ADDRESS_HELP_TEXT = _(
-    "Your address will not be displayed "
-    "publicly and is only needed in case a public agency "
-    "needs to send you paper."
-)
-
-
-class AddressBaseForm(forms.Form):
-    address = forms.CharField(
-        max_length=300,
-        required=False,
-        label=_("Mailing Address"),
-        help_text=ADDRESS_HELP_TEXT,
-        widget=forms.Textarea(
-            attrs={
-                "rows": "3",
-                "class": "form-control",
-                "placeholder": _("Street address,\nPost Code, City"),
-            }
-        ),
-    )
-
-    ALLOW_BLOCKED_ADDRESS = False
-
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-        if self.fields["address"].required:
-            self.fields["address"].help_text = ADDRESS_REQUIRED_HELP_TEXT
-
-    def get_user(self):
-        raise NotImplementedError
-
-    def clean_address(self) -> str:
-        address = self.cleaned_data["address"]
-        if not address:
-            return address
-        if self.ALLOW_BLOCKED_ADDRESS:
-            return address
-        user = self.get_user()
-        if user is not None:
-            if user.is_staff or user.is_trusted:
-                return address
-            if AccountBlocklist.objects.should_block_address(address):
-                raise forms.ValidationError(_("This address cannot be used by you."))
-        return address
-
-
-class NewUserBaseForm(AddressBaseForm):
+class NewUserBaseForm(forms.Form):
     first_name = forms.CharField(
         max_length=30,
         label=_("First name"),
@@ -263,26 +210,6 @@ class NewUserWithPasswordForm(NewUserForm):
         if cleaned["password"] != cleaned["password2"]:
             raise forms.ValidationError(_("Passwords do not match!"))
         return cleaned
-
-
-class AddressForm(JSONMixin, AddressBaseForm):
-    ALLOW_BLOCKED_ADDRESS = False
-
-    def __init__(self, *args, **kwargs) -> None:
-        address_required = kwargs.pop("address_required", False)
-        self.request = kwargs.pop("request", None)
-        super().__init__(*args, **kwargs)
-        self.fields["address"].required = address_required
-
-    def get_user(self):
-        return self.request.user
-
-    def save(self, user: SimpleLazyObject) -> None:
-        address = self.cleaned_data["address"]
-        if address:
-            user.address = address
-            AccountService.check_against_blocklist(user, save=False)
-            user.save()
 
 
 class UserLoginForm(AuthenticationForm):
