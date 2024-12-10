@@ -309,25 +309,11 @@ class UserChangeDetailsForm(forms.Form):
         label=_("Your email address"),
     )
 
-    address = forms.CharField(
-        max_length=300,
-        label=_("Your mailing address"),
-        help_text=_("Your address will never be displayed publicly."),
-        widget=forms.Textarea(
-            attrs={
-                "placeholder": _("Street, Post Code, City"),
-                "class": "form-control",
-                "rows": "3",
-            }
-        ),
-        required=False,
-    )
-    field_order = ["email", "address"]
+    field_order = ["email"]
 
     def __init__(self, user: SimpleLazyObject, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.user = user
-        self.fields["address"].initial = self.user.address
         self.fields["email"].initial = self.user.email
         self.order_fields(self.field_order)
 
@@ -336,7 +322,6 @@ class UserChangeDetailsForm(forms.Form):
         return email
 
     def save(self) -> None:
-        self.user.address = self.cleaned_data["address"]
         AccountService.check_against_blocklist(self.user, save=False)
         self.user.save()
 
