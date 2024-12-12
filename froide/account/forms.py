@@ -99,7 +99,6 @@ class NewUserBaseForm(forms.Form):
     def __init__(self, *args, **kwargs) -> None:
         address_required = kwargs.pop("address_required", False)
         super().__init__(*args, **kwargs)
-        self.fields["address"].required = address_required
         if ALLOW_PSEUDONYM and not address_required:
             self.fields["last_name"].help_text = format_html(
                 _(

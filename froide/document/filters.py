@@ -58,6 +58,10 @@ class DocumentFilter(FCDocumentFilter):
 
 
 def get_portal_queryset(request):
+    from django.contrib.auth.models import AnonymousUser
+    # is_crew is not an attribute of Anonymous users
+    if isinstance(request.user, AnonymousUser):
+        return DocumentPortal.objects.filter(public=True)
     if not request.user.is_crew:
         return DocumentPortal.objects.filter(public=True)
     return DocumentPortal.objects.all()
