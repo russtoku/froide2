@@ -64,9 +64,37 @@ dependencies = [
   "websockets",
   "django-filingcabinet @ git+https://github.com/okfde/django-filingcabinet.git@main",
   "pygtail @ git+https://github.com/okfde/pygtail.git@dac8bc6fc8d65c7ac820806e570242919616e946",
+  "ruff>=0.8.3",
+  "coverage[toml]>=7.6.9",
+  "django-coverage-plugin>=3.1.0",
 ]
 
 [project.optional-dependencies]
+test = [
+  "beautifulsoup4",
+  "coverage[toml]",
+  "django-coverage-plugin",
+  "django-stubs",
+  "factory-boy",
+  "faker",
+  "monkeytype",
+  "mypy",
+  "pbr",
+  "pre-commit",
+  "pycodestyle",
+  "pyflakes",
+  "pytest-django",
+  "pytest-factoryboy",
+  "pytest-playwright",
+  "tblib",
+  "text-unidecode",
+  "time-machine",
+  "types-Markdown",
+  "types-python-dateutil",
+  "types-requests",
+]
+
+[dependency-groups]
 test = [
   "beautifulsoup4",
   "coverage[toml]",
