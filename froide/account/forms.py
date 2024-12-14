@@ -25,7 +25,7 @@ from froide.helper.widgets import (
 
 from . import account_email_changed
 from .auth import complete_mfa_authenticate_for_method
-from .models import AccountBlocklist, User
+from .models import User
 from .registries import user_extra_registry
 from .services import AccountService, get_user_for_email
 from .widgets import ConfirmationWidget, PinInputWidget
@@ -97,9 +97,8 @@ class NewUserBaseForm(forms.Form):
     field_order = ["first_name", "last_name", "user_email"]
 
     def __init__(self, *args, **kwargs) -> None:
-        address_required = kwargs.pop("address_required", False)
         super().__init__(*args, **kwargs)
-        if ALLOW_PSEUDONYM and not address_required:
+        if ALLOW_PSEUDONYM:
             self.fields["last_name"].help_text = format_html(
                 _(
                     '<a target="_blank" href="{}">You may use a pseudonym if you don\'t need to receive postal messages</a>.'

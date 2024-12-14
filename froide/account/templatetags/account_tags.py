@@ -17,9 +17,7 @@ register = template.Library()
 def get_user_form(context, address_required=False):
     request = context["request"]
     if request.user.is_authenticated:
-        return AddressForm(
-            initial={"address": request.user.address}, address_required=address_required
-        )
+        return NewUserForm(address_required=address_required, request=request)
     else:
         return NewUserForm(address_required=address_required, request=request)
 

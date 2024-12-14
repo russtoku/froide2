@@ -181,7 +181,6 @@ def export_user_data(user):
             "first_name",
             "last_name",
             "email",
-            "address",
             "terms",
             "organization",
             "organization_url",

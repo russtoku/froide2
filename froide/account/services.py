@@ -87,7 +87,7 @@ class AccountService(object):
 
         user.private = data["private"]
 
-        for key in ("address", "organization_name", "organization_url"):
+        for key in ("organization_name", "organization_url"):
             setattr(user, key, data.get(key, ""))
 
         cls.check_against_blocklist(user)
@@ -345,15 +345,9 @@ class AccountService(object):
         repl = {
             "name": str(_("<< Name removed >>")),
             "email": str(_("<< Email removed >>")),
-            "address": str(_("<< Address removed >>")),
         }
         if replacements is not None:
             repl.update(replacements)
-
-        if self.user.address:
-            for line in self.user.address.splitlines():
-                if line.strip():
-                    yield (line.strip(), repl["address"])
 
         if self.user.email:
             yield (self.user.email, repl["email"])

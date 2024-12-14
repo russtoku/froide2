@@ -328,13 +328,7 @@ class MakeRequestView(FormView):
         return initial_user_data
 
     def get_user_form(self):
-        if self.request.user.is_authenticated:
-            form_klass = AddressForm
-            kwargs = {
-                "initial": {"address": self.request.user.address},
-                "request": self.request,
-            }
-        else:
+        if not self.request.user.is_authenticated:
             form_klass = NewUserForm
             kwargs = {"initial": self.get_user_initial(), "request": self.request}
         if self.request.method in ("POST", "PUT"):

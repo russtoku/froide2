@@ -274,7 +274,7 @@ def delete_undeleted_left_users():
     for user in canceled_but_undeleted:
         start_cancel_account_process(user)
 
-
+# shouldn't be used since we don't store addresses for users
 def parse_address(address):
     match = POSTCODE_RE.search(address)
     if match is None:

@@ -21,6 +21,5 @@ class UserFactory(DjangoModelFactory):
     last_login = datetime(2000, 1, 1).replace(tzinfo=timezone.utc)
     date_joined = datetime(1999, 1, 1).replace(tzinfo=timezone.utc)
     private = False
-    address = "Dummystreet5\n12345 Town"
     organization_name = ""
     organization_url = ""

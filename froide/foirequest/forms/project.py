@@ -86,7 +86,6 @@ class SendMessageProjectForm(SendMessageForm):
         self.foirequests = kwargs.pop("foirequests")
 
     def _initialize_fields(self):
-        self.fields["address"].initial = self.foiproject.user.address
         self.fields["message"].initial = get_default_initial_message(
             self.foiproject.user
         )

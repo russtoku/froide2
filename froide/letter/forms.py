@@ -29,7 +29,7 @@ class LetterForm(forms.Form):
         super().__init__(*args, **kwargs)
 
         self.fields["address"].initial = "{name}\n{address}".format(
-            name=self.user.get_full_name(), address=self.user.address
+            name=self.user.get_full_name(), address=""
         )
 
         fields = self.template.get_fields()

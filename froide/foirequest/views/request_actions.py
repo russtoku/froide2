@@ -243,9 +243,6 @@ def make_same_request(request, slug):
                 request, messages.ERROR, _("You already made an identical request")
             )
             return render_400(request)
-        address_form = AddressForm(request.POST, request=request)
-        if address_form.is_valid():
-            address_form.save(user)
 
     throttle_message = check_throttle(request.user, FoiRequest)
     if throttle_message:

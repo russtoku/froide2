@@ -175,7 +175,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     private = models.BooleanField(_("Private"), default=False)
-    #address = models.TextField(_("Address"), blank=True)
     terms = models.BooleanField(_("Accepted Terms"), default=True)
 
     profile_text = models.TextField(blank=True)
@@ -264,7 +263,6 @@ class User(AbstractBaseUser, PermissionsMixin):
                 "private",
                 "date_joined",
                 "is_staff",
-                "address",
                 "terms",
                 "request_count",
                 ("tags", lambda x: ",".join(str(t) for t in x.tags.all())),
@@ -277,7 +275,6 @@ class User(AbstractBaseUser, PermissionsMixin):
                 "id": self.id,
                 "first_name": self.first_name,
                 "last_name": self.last_name,
-                "address": self.address,
                 "private": self.private,
                 "email": self.email,
                 "organization": self.organization_name,
@@ -419,8 +416,7 @@ class AccountBlocklist(models.Model):
 
     def match_user(self, user: User) -> bool:
         return (
-            self.match_field(user, "address")
-            or self.match_field(user, "email")
+            self.match_field(user, "email")
             or self.match_content(self.full_name, user.get_full_name())
         )
 

@@ -289,7 +289,6 @@ class SendMessageForm(AttachmentSaverMixin, forms.Form):
         address_optional = self.foirequest.law and self.foirequest.law.email_only
 
         self.fields["send_address"].initial = not address_optional
-        self.fields["address"].initial = self.foirequest.user.address
 
     def get_user(self):
         return self.foirequest.user

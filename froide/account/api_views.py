@@ -66,7 +66,7 @@ class UserEmailDetailSerializer(UserDetailSerializer):
 class UserFullSerializer(UserEmailDetailSerializer):
     class Meta:
         model = User
-        fields = UserEmailDetailSerializer.Meta.fields + ("address",)
+        fields = UserEmailDetailSerializer.Meta.fields
 
 
 class ProfileView(views.APIView):

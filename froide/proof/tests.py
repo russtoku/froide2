@@ -42,7 +42,7 @@ def test_send_message_with_proof(world, client):
     post = {
         "sendmessage-subject": "Re: Custom subject",
         "sendmessage-message": "My custom reply",
-        "sendmessage-address": user.address,
+        "sendmessage-address": "",
         "sendmessage-send_address": "1",
         "sendmessage-to": pb.email,
         "proof": "",
