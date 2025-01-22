@@ -103,7 +103,6 @@ class EmailMessageHandler(MessageHandler):
 
         message.timestamp = timezone.now()
         message.save()
-
         message.email_message_id = message.make_message_id()
         extra_kwargs["message_id"] = message.email_message_id
         froide_message_id = message.get_absolute_domain_short_url()
@@ -115,6 +114,7 @@ class EmailMessageHandler(MessageHandler):
             from_addr,
             [message.recipient_email.strip()],
             attachments=attachments,
+            bcc=[from_addr],  # user email
             **extra_kwargs,
         )
 

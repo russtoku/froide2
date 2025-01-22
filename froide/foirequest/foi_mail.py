@@ -45,6 +45,7 @@ def send_foi_mail(
     message,
     from_email,
     recipient_list,
+    bcc=None,
     attachments=None,
     fail_silently=False,
     **kwargs,
@@ -86,6 +87,7 @@ def send_foi_mail(
         message,
         from_email,
         recipient_list,
+        bcc=bcc,
         connection=connection,
         headers=headers,
     )
