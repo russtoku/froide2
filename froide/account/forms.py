@@ -73,7 +73,7 @@ class NewUserBaseForm(forms.Form):
         help_text=_("Not public. The given address will " "need to be confirmed."),
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -214,7 +214,7 @@ class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -285,7 +285,7 @@ class PasswordResetForm(auth.forms.PasswordResetForm):
     email = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -299,7 +299,7 @@ class UserChangeDetailsForm(forms.Form):
         required=False,
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }

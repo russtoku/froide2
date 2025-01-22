@@ -141,8 +141,8 @@ msgstr "非公開。地址有待核實。"
 
 #: froide/account/forms.py:45 froide/account/forms.py:138
 #: froide/account/forms.py:152 froide/account/forms.py:161
-msgid "mail@ddress.net"
-msgstr "mail@ddress.net"
+msgid "dakine@ovahea.com"
+msgstr "dakine@ovahea.com"
 
 #: froide/account/forms.py:51 froide/account/forms.py:54
 #: froide/account/models.py:28

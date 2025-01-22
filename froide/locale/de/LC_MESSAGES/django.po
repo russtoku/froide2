@@ -292,8 +292,8 @@ msgid "Not public. The given address will need to be confirmed."
 msgstr "Nicht öffentlich. Sie müssen diese Adresse bestätigen."
 
 #: froide/account/forms.py
-msgid "mail@ddress.net"
-msgstr "email@dresse.net"
+msgid "dakine@ovahea.com"
+msgstr "dakine@ovahea.com"
 
 #: froide/account/forms.py
 msgid "Hide my name from public view"
