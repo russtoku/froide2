@@ -269,13 +269,11 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
         ],
     )
 
-    resolution = forms.ChoiceField(
+    resolution = forms.CharField(
         label=_("Resolution"),
-        choices=[("", _("No outcome yet"))] + FoiRequest.RESOLUTION.choices,
         required=False,
-        widget=BootstrapSelect,
-        help_text=_("How would you describe the current outcome of this request?"),
-    )
+        widget=forms.Textarea(attrs={"class": "form-control",
+                                     "placeholder": _("Resolution")}))
     if payment_possible:
         costs = forms.DecimalField(
             label=_("Costs"),
