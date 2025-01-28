@@ -222,7 +222,7 @@ class CreateRequestService(BaseService):
         if "tags" in data and data["tags"]:
             request.tags.add(*[t[:100] for t in data["tags"]])
 
-        subject = u'Records Request for %s: %s' % (publicbody.name, request.title)
+        subject = f'Records Request for {publicbody.name}: {request.title} [#{request.pk}'
         message = FoiMessage(
             request=request,
             sent=False,
