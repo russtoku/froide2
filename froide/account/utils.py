@@ -228,8 +228,9 @@ def cancel_user(user: User, delete: bool = False) -> None:
     user.tags.clear()
     user.save()
     user.groups.clear()
-    user.first_name = ""
-    user.last_name = ""
+    # Don't clear first and last names so that we can redact after account is deleted
+    # user.first_name = ""
+    # user.last_name = ""
     user.is_trusted = False
     user.is_staff = False
     user.is_superuser = False
