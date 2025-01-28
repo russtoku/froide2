@@ -53,7 +53,7 @@ class PublicBodySearch(BaseSearchView):
     }
 
 
-@cache_anonymous_page(15 * 60)
+@cache_anonymous_page(3 * 60)
 def show_jurisdiction(request, slug):
     jurisdiction = get_object_or_404(Jurisdiction, slug=slug, hidden=False)
     context = {

@@ -13,7 +13,7 @@ from ..models import FoiRequest
 from ..pdf_generator import FoiRequestPDFGenerator
 
 
-@cache_anonymous_page(15 * 60)
+@cache_anonymous_page(3 * 60)
 def index(request):
     successful_foi_requests = FoiRequest.published.successful()[:8]
     unsuccessful_foi_requests = FoiRequest.published.unsuccessful()[:8]
