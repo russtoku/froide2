@@ -296,11 +296,10 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
         refusal_choices = []
         if foirequest.law:
             refusal_choices = foirequest.law.get_refusal_reason_choices()
-        self.fields["refusal_reason"] = forms.ChoiceField(
+        self.fields["refusal_reason"] = forms.CharField(
             label=_("Refusal Reason"),
-            choices=[("", _("No or other reason given"))] + refusal_choices,
             required=False,
-            widget=BootstrapSelect,
+            widget=forms.Textarea(attrs={"class": "form-control"}),
             help_text=_(
                 "When you are (partially) denied access to information, "
                 "the Public Agency should always state the reason."
