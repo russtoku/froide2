@@ -247,7 +247,8 @@ class SendMessageForm(AttachmentSaverMixin, forms.Form):
     )
 
     files_help_text = _(
-        "Uploaded scans can be PDF, JPG, PNG or GIF. They will be non-public "
+        "Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+        f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB.. They will be non-public "
         "by default and can be redacted after upload."
     )
     files = MultipleFileField(
@@ -619,7 +620,8 @@ class EditMessageForm(MessageEditMixin):
 
 
 class PostalBaseForm(MessageEditMixin, AttachmentSaverMixin, forms.Form):
-    scan_help_text = _("Uploaded scans can be PDF, JPG, PNG or GIF.")
+    scan_help_text = _("Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+                       f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB..")
     publicbody = forms.ModelChoiceField(
         label=_("Public agency"),
         queryset=PublicBody.objects.all(),

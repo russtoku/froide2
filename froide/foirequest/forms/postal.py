@@ -1,6 +1,7 @@
 from functools import partial
 
 from django import forms
+from django.conf import settings
 from django.db import transaction
 from django.forms import HiddenInput
 from django.forms.models import ModelChoiceField
@@ -48,7 +49,8 @@ class PostalUploadForm(MessageEditMixin, JSONMixin, forms.Form):
         required=False,
         allowed_file_types=[".pdf", ".jpg", ".jpeg", ".png", ".gif"],
         help_text=_(
-            "Uploaded scans can be PDF, JPG, PNG or GIF. They will be non-public "
+            "Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+            f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB.. They will be non-public "
             "by default and can be redacted after upload."
         ),
     )

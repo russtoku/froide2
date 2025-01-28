@@ -354,7 +354,8 @@ def edit_postal_message(request, foirequest, message_id):
                 _("Part of administrative regions"),
             ],
             # from forms/message.py
-            "scanHelpText": _("Uploaded scans can be PDF, JPG, PNG or GIF."),
+            "scanHelpText": _("Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+                              f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB."),
             # post-upload.vue
             "step": _("Step"),
             "done": _("Done"),
