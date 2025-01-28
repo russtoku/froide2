@@ -848,7 +848,7 @@ def test_set_message_sender(world, client, pb, msgobj):
         ParsedEmail(
             msgobj,
             **{
-                "date": timezone.now() + timedelta(days=1),
+                "date": time1zone.now() + timedelta(days=1),
                 "subject": "Re: %s" % req.title,
                 "body": """Message""",
                 "html": None,

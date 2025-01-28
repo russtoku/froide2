@@ -114,7 +114,7 @@ def get_send_message_form(*args, **kwargs):
     foirequest = kwargs.pop("foirequest")
     last_message = list(foirequest.messages)[-1]
     # Translators: message reply prefix
-    prefix = _("Re:")
+    prefix = _("")
     subject = last_message.subject
     if not subject.startswith(str(prefix)):
         subject = "{prefix} {subject}".format(
