@@ -317,6 +317,8 @@ class UserChangeDetailsForm(forms.Form):
 
     def clean_email(self) -> str:
         email = self.cleaned_data["email"].lower()
+        if 'address' in self.cleaned_data:
+            self.user.address = self.cleaned_data['address']
         return email
 
     def save(self) -> None:
