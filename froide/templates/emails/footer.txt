@@ -1,1 +1,4 @@
 {% load i18n %}{% autoescape off %}--
+{% blocktrans %}Email sent from uipa.org
+{% endblocktrans %}{% endautoescape %}
+

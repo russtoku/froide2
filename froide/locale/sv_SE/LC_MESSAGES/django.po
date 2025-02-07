@@ -2561,11 +2561,9 @@ msgstr ""
 
 #: froide/foirequest/templates/foirequest/emails/user_footer.txt:2
 msgid ""
-"Support Froide by donating to Open Knowledge Foundation Germany:\n"
-"http://okfn.de/spenden/\n"
+"Email sent from uipa.org\n"
 msgstr ""
-"Stöd Froide genom att donera till Open Knowledge Foundation Germany:\n"
-"http://okfn.de/spenden/\n"
+"E-post skickat från uipa.org\n"
 
 #: froide/foirequest/templates/foirequest/list.html:5
 msgid "RSS Feed for these requests"

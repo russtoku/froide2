@@ -2719,19 +2719,15 @@ msgstr "Tags auf den gewählten Objekten setzen"
 
 #: froide/templates/emails/footer.html
 msgid ""
-"Support Froide by <a href=\"https://okfn.de/spenden/\">donating to Open "
-"Knowledge Foundation Germany</a>"
+"Email sent from <a href=\"https://uipa.org\">uipa.org</a>"
 msgstr ""
-"Wir kämpfen für Transparenz! <a href=\"https://fragdenstaat.at/\">Kämpfen "
-"Sie mit und unterstützen Sie uns.</a>"
+"E-Mail gesendet von <a href=\"https://uipa.org\">uipa.org</a>"
 
 #: froide/templates/emails/footer.txt
 msgid ""
-"Support Froide by donating to Open Knowledge Foundation Germany:\n"
-"https://okfn.de/spenden/\n"
+"Email sent from uipa.org\n"
 msgstr ""
-"Wir kämpfen für Transparenz! Kämpfen Sie mit und unterstützen Sie uns:\n"
-"https://fragdenstaat.at/\n"
+"E-Mail gesendet von uipa.org\n"
 
 #: froide/templates/footer.html froide/templates/header.html
 msgid "About"
